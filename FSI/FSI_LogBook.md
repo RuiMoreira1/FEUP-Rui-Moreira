@@ -76,12 +76,12 @@
    - The exploit had numerous debug strings from an older exploit [CVE-2016-3309](https://github.com/siberas/CVE-2016-3309_Reloaded/)
 
 
-   2. **Vulnerability Listing**
+2. **Vulnerability Listing**
       - **Zero-day vulnerability**, exploitation detected.
       - Microsoft Acknowledge [Boris Larin](https://twitter.com/oct0xor) on the 12<sup>th</sup> of October 2021, for reporting the vulnerability, currently working for ***Kaspersky GReAT***.
       - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) <span style="color:red"> 7.8 </span>
 
-   3. **Exploit**
+3. **Exploit**
       - **MysterySnail** remote shell-type Trojan, can collect and steal system information from compromised hosts and also provides a gateway to other attacks such as ransomware.
       - Before receiving any commands can gather and send information such as:
         - Computer name
@@ -104,7 +104,7 @@
 
        - [Exploit available in github](https://github.com/ly4k/CallbackHell)
 
-    4. **Attacks**
+4. **Attacks**
        - Kaspersky technologies detected a series of attacks using an elevation of privilege exploit on multiple Microsoft Windows servers
        - This exploit had many debug strings from an older, publicly known exploit for vulnerability **CVE-2016-3309**, but closer analysis revealed a new zero-day.
        - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT
