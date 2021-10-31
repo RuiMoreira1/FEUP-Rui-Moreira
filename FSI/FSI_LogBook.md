@@ -53,7 +53,7 @@
 * [Exploit video](https://github.com/KaLendsi/CVE-2021-40449-Exploit)
 
 
-#### **Task 1 class #3**
+#### **Task class #3**
 
 1. **Identification**:
      [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
@@ -112,3 +112,6 @@
     - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT
 
     - Variants of this malware were being used in widespread espionage campaigns **targeting** IT companies, military, defense contractors and diplomatic entities.  
+
+    - Kaspersky products **detected these attacks with the help of the **Behavioral Detection Engine and the Exploit Prevention component**, before any damages where
+    done.
