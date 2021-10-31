@@ -77,13 +77,13 @@
 
 
 2. **Vulnerability Listing**
-      - **Zero-day vulnerability**, exploitation detected.
-      - Microsoft Acknowledge [Boris Larin](https://twitter.com/oct0xor) on the 12<sup>th</sup> of October 2021, for reporting the vulnerability, currently working for ***Kaspersky GReAT***.
-      - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) <span style="color:red"> 7.8 </span>
+    - **Zero-day vulnerability**, exploitation detected.
+    - Microsoft Acknowledge [Boris Larin](https://twitter.com/oct0xor) on the 12<sup>th</sup> of October 2021, for reporting the vulnerability, currently working for ***Kaspersky GReAT***.
+    - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) <span style="color:red"> 7.8 </span>
 
 3. **Exploit**
-      - **MysterySnail** remote shell-type Trojan, can collect and steal system information from compromised hosts and also provides a gateway to other attacks such as ransomware.
-      - Before receiving any commands can gather and send information such as:
+    - **MysterySnail** remote shell-type Trojan, can collect and steal system   information from compromised hosts and also provides a gateway to other attacks such as ransomware.
+    - Before receiving any commands can gather and send information such as:
         - Computer name
         - Current OEM code-page/default identifier
         - Windows Product name
@@ -91,21 +91,24 @@
         - Logged-in user name
         - Campaign name
 
-       - List of **commands** that this RAT can perform!
-       ![Rat Commands List](Rat_Commands.png)
+    - List of **commands** that this RAT can perform!
+    ![Rat Commands List](Rat_Commands.png)
 
-       - The vulnerability can lead to leakage of kernel module addresses in the computers memory,
+    - The vulnerability can lead to leakage of kernel module addresses in the computers memory,
        typically associated with UAF vulnerability.
 
-       - The Trojan, a [RAT](https://encyclopedia.kaspersky.com/glossary/rat-remote-access-tools/),
+    - The Trojan, a [RAT](https://encyclopedia.kaspersky.com/glossary/rat-remote-access-tools/),
        is used to gain access remotely to another device connected to the Internet or local network.
 
-       - Can launch the **cmd.exe** interactive shell (by copying the **cmd.exe** file to a temp folder under a different name).
+    - Can launch the **cmd.exe** interactive shell (by copying the **cmd.exe** file to a temp folder under a different name).
 
-       - [Exploit available in github](https://github.com/ly4k/CallbackHell)
+    - [Exploit available in github](https://github.com/ly4k/CallbackHell)
 
 4. **Attacks**
-       - Kaspersky technologies detected a series of attacks using an elevation of privilege exploit on multiple Microsoft Windows servers
-       - This exploit had many debug strings from an older, publicly known exploit for vulnerability **CVE-2016-3309**, but closer analysis revealed a new zero-day.
-       - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT
-       - Variants of this malware were being used in widespread espionage campaigns **targeting** IT companies, military, defense contractors and diplomatic entities.  
+    - Kaspersky technologies detected a series of attacks using an elevation of privilege exploit on multiple Microsoft Windows servers
+
+    - This exploit had many debug strings from an older, publicly known exploit for vulnerability **CVE-2016-3309**, but closer analysis revealed a new zero-day.
+
+    - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT
+    
+    - Variants of this malware were being used in widespread espionage campaigns **targeting** IT companies, military, defense contractors and diplomatic entities.  
