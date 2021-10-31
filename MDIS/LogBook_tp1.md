@@ -37,7 +37,7 @@ percorrer a lista de frases. Atribuir mentalmente um valor de verdade a cada uma
 relativamente àquele mundo. Verificar o resultado com o botão Verify. Alterar as
 posições dos objetos e verificar de novo as frases. O objetivo é perceber a interpretação
 de cada predicado da linguagem FOL usada no programa Tarski’s World. Por exemplo,
-no mundo original nenhuma das frases com Adjoins é verdadeira; verifique porquê. 
+no mundo original nenhuma das frases com Adjoins é verdadeira; verifique porquê.
 
 **Answer** - The exercise is just to understand the meaning of the Tarksi's World predicates
 
@@ -53,7 +53,7 @@ no mundo original nenhuma das frases com Adjoins é verdadeira; verifique porqu�
 7. a=d
 8. Larger(a,b)
 9. Smaller(a,c)
-10.LeftOf(b,c)
+10. LeftOf(b,c)
 
 	Construa um mundo novo em que as frases acima sejam simultaneamente verdadeiras.
 Guarde os resultados nos ficheiros Sentences 1.2.sen e World 1.3.wld.
@@ -61,8 +61,3 @@ Guarde os resultados nos ficheiros Sentences 1.2.sen e World 1.3.wld.
 **Answer** - Tarski's World File (Images will be associated)
 
 1.
-
-
-
-
-
