@@ -56,8 +56,10 @@
 #### **Task class #3**
 
 1. **Identification**:
-     [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
+    - [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
+
     - **Privilege escalation vulnerability** affecting the ***NtGdiResetDC*** function in **win32k kernel driver**. This exploits are used to **deliver remote access Trojans (RATs)**.
+
     -  Affected systems:
        - Windows Vista
        - Windows 7
@@ -78,11 +80,14 @@
 
 2. **Vulnerability Listing**
     - **Zero-day vulnerability**, exploitation detected.
+
     - Microsoft Acknowledge [Boris Larin](https://twitter.com/oct0xor) on the 12<sup>th</sup> of October 2021, for reporting the vulnerability, currently working for ***Kaspersky GReAT***.
+
     - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) <span style="color:red"> 7.8 </span>
 
 3. **Exploit**
-    - **MysterySnail** remote shell-type Trojan, can collect and steal system   information from compromised hosts and also provides a gateway to other attacks such as ransomware.
+    - **MysterySnail** remote shell-type Trojan, can collect and steal system information from compromised hosts and also provides a gateway to other attacks such as ransomware.
+
     - Before receiving any commands can gather and send information such as:
         - Computer name
         - Current OEM code-page/default identifier
