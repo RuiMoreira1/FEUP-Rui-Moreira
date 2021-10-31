@@ -56,24 +56,24 @@
 #### **Task 1 class #3**
 
 1. **Identification**:
-   - [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
-   - **Privilege escalation vulnerability** affecting the ***NtGdiResetDC*** function in **win32k kernel driver**. This exploits are used to **deliver remote access Trojans (RATs)**.
-   -  Affected systems:
-     - Windows Vista
-     - Windows 7
-     - Windows 8
-     - Windows 8.1
-     - Windows Server 2008
-     - Windows Server 2008 R2
-     - Microsoft Windows Server 2012
-     - Microsoft Windows Server 2012 R2,
-     - Microsoft Windows 10 (build 14393)
-     - Microsoft Windows Server 2016 (build 14393)
-     - Microsoft Windows 10 (build 17763)
-     - Microsoft Windows Server 2019 (build 17763)
-     - The exploit was only tested in **Microsoft Windows 10 (build 14393)** and **Microsoft Windows 10 (build 17763)**
+     [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
+    - **Privilege escalation vulnerability** affecting the ***NtGdiResetDC*** function in **win32k kernel driver**. This exploits are used to **deliver remote access Trojans (RATs)**.
+    -  Affected systems:
+       - Windows Vista
+       - Windows 7
+       - Windows 8
+       - Windows 8.1
+       - Windows Server 2008
+       - Windows Server 2008 R2
+       - Microsoft Windows Server 2012
+       - Microsoft Windows Server 2012 R2,
+       - Microsoft Windows 10 (build 14393)
+       - Microsoft Windows Server 2016 (build 14393)
+       - Microsoft Windows 10 (build 17763)
+       - Microsoft Windows Server 2019 (build 17763)
+       - The exploit was only tested in **Microsoft Windows 10 (build 14393)** and **Microsoft Windows 10 (build 17763)**
 
-   - The exploit had numerous debug strings from an older exploit [CVE-2016-3309](https://github.com/siberas/CVE-2016-3309_Reloaded/)
+    - The exploit had numerous debug strings from an older exploit [CVE-2016-3309](https://github.com/siberas/CVE-2016-3309_Reloaded/)
 
 
 2. **Vulnerability Listing**
@@ -110,5 +110,5 @@
     - This exploit had many debug strings from an older, publicly known exploit for vulnerability **CVE-2016-3309**, but closer analysis revealed a new zero-day.
 
     - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT
-    
+
     - Variants of this malware were being used in widespread espionage campaigns **targeting** IT companies, military, defense contractors and diplomatic entities.  
