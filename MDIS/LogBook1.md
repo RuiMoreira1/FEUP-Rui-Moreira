@@ -61,7 +61,7 @@ Guarde os resultados nos ficheiros Sentences 1.2.sen e World 1.3.wld.
 
 **Answer** - Tarski's World File (Images will be associated)
 
- ![](Ex2_tp1_MDIS.PNG)
+ ![](Ex2_tp1_Mdis.PNG)
 
 **Exercise 3** - {1.5} Nomear objectos. Abra Lestrade’s Sentences e Lestrade’s world. Atribua
 nomes aos objetos existentes no mundo de forma a que todas as frases na lista se
@@ -73,7 +73,7 @@ segunda solução diferente da primeira e guarde o resultado como World 1.6.wld.
 - ⟷ -> Means that A ⟷ B, is true when A && B have the same boolean value
 - Add image with the solution, last one not solved, **TO DO**
 
-![](Ex3_tp1_MDIS.PNG)
+![](Ex3_tp1_Mdis.PNG)
 
 **Exercise 8** 
 
