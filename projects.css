@@ -1,0 +1,17 @@
+body{
+  background-color: #FFFFE0;
+  font-family: Arial;
+  font-size: 105%;
+  text-transform: inherit;
+}
+
+
+
+.Title{
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  color : black;
+  font-size : 300%;
+  text-align: center;
+  padding: 15px 30px;
+}
