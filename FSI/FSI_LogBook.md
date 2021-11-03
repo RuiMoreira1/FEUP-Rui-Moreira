@@ -83,7 +83,7 @@
 
     - Microsoft Acknowledge [Boris Larin](https://twitter.com/oct0xor) on the 12<sup>th</sup> of October 2021, for reporting the vulnerability, currently working for ***Kaspersky GReAT***.
 
-    - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) <span style="color:red"> 7.8 </span>
+    - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) 7.8
 
 3. **Exploit**
     - **MysterySnail** remote shell-type Trojan, can collect and steal system information from compromised hosts and also provides a gateway to other attacks such as ransomware.
