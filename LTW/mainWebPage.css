@@ -1,8 +1,116 @@
 body {
-  background-color: linen;
+  background-color: #FFFFE0;
+  font-family: Arial;
+  font-size: 105%;
+  text-transform: inherit;
+}
+
+p {
+  margin: 50px;
+}
+
+.WebPageTitle{
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  color : black;
+  font-size : 300%;
+  text-align: center;
+  width: 100%;
+}
+
+.button1{
+  background-color: #555555;
+  border: 1px solid black;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+
 }
 
 h1 {
+  background: #00000;
   color: maroon;
-  margin-left: 40px;
+  margin-left: 10px;
 }
+
+.center{
+  max-width: 100%;
+  max-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.LtwFormat{
+  display: block;
+  float: right; margin-left: 10px;
+  max-width: 100%;
+  height: auto;
+  width: 30%;
+}
+
+figcaption{
+  background-color: inherit;
+  color: black;
+  font-style: oblique;
+  padding: 2px 5px;
+  text-align: center;
+}
+
+.FeupSub{
+  background-color: inherit;
+  color: black;
+  font-style: oblique;
+  padding: 2px 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 90%;
+  font-style: italic;
+}
+
+.Bold{
+  font-weight: bold;
+}
+
+ul {
+  text-indent: 15px;
+  line-height: 1.8;
+  text-transform: full-width;
+  text-align: justify;
+}
+
+.subItem{
+  background-color: #555555;
+  border: 1px solid black;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: inherit;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+
+}
+/*
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+*/
