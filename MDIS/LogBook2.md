@@ -7,7 +7,7 @@ Exercícios propostos:
 ## **Exercicio 2 F.24**
 
 ## **Exercicio 3 F.24**
-> ![](Ex3_tp2_F24.PNG)
+> ![](Screenshots/Ex3_tp2_F24.PNG)
 
 ## **Exercicio 5 F.24**
 
@@ -25,7 +25,7 @@ Exercícios propostos:
 11. ¬SameRow(b,c)
 12. SameCol(b,e) ∧ SameRow(e,d) ∧ SameCol(d,a)
 
-> ![](Ex5_tp2_F24.PNG)
+> ![](Screenshots/Ex5_tp2_F24.PNG)
 
 
 ## **Exercicio 7 F24**
@@ -39,4 +39,4 @@ Exercícios propostos:
 
 ## **Exercicio 1 F28**
 
-![](Ex1_tp2_F28.PNG)
+![](Screenshots/Ex1_tp2_F28.PNG)
