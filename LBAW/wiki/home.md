@@ -6,6 +6,9 @@ Project documentation regarding the project developed for **LBAW**
 
 ### [ER: Requirements Specification Component](FirstDelivery.md)
 
-* [A1 : The Last Chapter]()
-* [A2 : Actors and User Stories]()
-* [A3 : Information Architecture]()
+* [A1 : The Last Chapter](FirstDelivery.md#a1-online-shop-‘the-last-chapter’)
+* [A2 : Actors and User Stories](FirstDelivery.md#a2:-actors-and-user-stories)
+* [A3 : Information Architecture](FirstDelivery.md#a3-information-architecture)
+
+
+> Checklist Available [here](https://docs.google.com/spreadsheets/d/1XEtNUQIaNC17TGOuskqaxAFwLuNCY5szVM82XTTu-h4/edit#gid=537406521)
