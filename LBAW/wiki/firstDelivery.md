@@ -2,8 +2,9 @@
  
 An Online Shop that becomes your ‘street corner’ bookshop only a click away!
  
-# **A1 - Online Shop - ‘The Last Chapter’**
-
+# **A1 Online Shop ‘The Last Chapter’**
+ 
+ 
 The main goal of the ‘The Last Chapter’ project is the development of a web-based online book store where you can buy all your favorite books, from old classics to comic books, and find others that you’ll love. The store is managed by a team of administrators that ensure the correct flow of the website.
  
 Our central motivation is to offer a pleasant shopping experience, where from the comfort of your own home, you can order books that may not be available in your usual ‘street corner’ bookshop.
@@ -28,24 +29,6 @@ On our website we have two central types of actors, **administrators** and **use
 * **Users** are divided into 2 main groups with different roles: 
     * **Guests** - that can view all of the products available but have to Log In to  checkout a purchase; 
     * **Authenticated users** - that can access more of the website, including their purchase history, wishlist, and notifications.
-
-
-# **A2 Actors and User Stories**
-
-This artifact contains the specification of the actors and their user stories, serving as agile documentation of project requirements.
-
-### **2.1 Actors**
-
-![Actors Figure](Pictures/figure1.png)
-*Figure 1: Actors*
-
-| Identifier | Description | Examples|
-| -----------|-------------|---------|
-| User       |Common user; Has access to public information and can execute tasks such as search with filters, view items, read reviews. | n/a |
-| Administrator| Supervise products, users, users reviews that go against the company policy; Treatment orders | n/a |
-| Non-registered User | Can either register or authenticate in the system. | n/a |
-| Registered User | Can perform tasks such as, making purchases, add items to the wish list, manage their profile. | n/a |
-| Buyer | Authenticated user that has at least one purchase; Can make reviews on a purchased item. | n/a |
 
 # **A2: Actors and User Stories**
 
@@ -141,7 +124,7 @@ This artifact contains the specification of the actors and their user stories, s
 | US44 | Item Recommendation | Medium | As an Authenticated user, I want to get an item recommendation based on my purchase history. |
 | US45 | View personalized suggestions on the product page | Low |As an Authenticated user, I want to view suggested items, suitable to the users' preferences. |
 
-*Table 4: Authenticated user' user stories*
+*Table 5: Authenticated user' user stories*
 
 **A2.2.5 Buyer**
 
@@ -152,7 +135,7 @@ This artifact contains the specification of the actors and their user stories, s
 | US48 | Delete Review | High | As a buyer, I want to delete my review on an item. |
 | US49| View purchase history | High | As a buyer, I want to view the items that I purchased. |
 
-*Table 5: Buyer User stories*
+*Table 6: Buyer User stories*
 
 ## **A2.3 Supplementary Requirements**
 
@@ -176,7 +159,7 @@ This artifact contains the specification of the actors and their user stories, s
 | BR14 | Return Order | A buyer can return a placed order that has been already delivered. |
 | BR15 | Logout | The logout should only be possible if the user is currently logged in. | 
 
-*Table 6: Business Rules*
+*Table 7: Business Rules*
 
 
 ### **A2.3.2 Technical Requirements**
@@ -195,7 +178,7 @@ This artifact contains the specification of the actors and their user stories, s
 | TR10 | Scalability | The system must be prepared to deal with the growth in the number of users and their actions. |
 | TR11 | Ethics | The website must respect the ethical principles in software development (for example, personal user details like passwords, payment credentials and addresses, should be stored encrypted and only shared with the permission of their owner). | 
 
-*Table 7: Technical Requirements*
+*Table 8: Technical Requirements*
 
  *- As Technical requirements assinaladas com asterisco são as que consideramos mais críticas.
 
@@ -204,6 +187,8 @@ This artifact contains the specification of the actors and their user stories, s
 | Identifier | Name  | Description |
 | -----------|-------------|-------|
 | C01 | Deadline | ‘The Last Chapter’ online shop should be ready to use at the end of the semester. |
+
+*Table 9: Restrictions Requirements*
 
 # **A3 Information Architecture**
 
@@ -228,7 +213,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/not_logged_home.PNG) |  ![](Pictures/not_logged_home_mob.PNG) |
 
-*Table 8: Homepage not logged in Wireframe*
+*Table 10: Homepage not logged in Wireframe*
 
 
 |ID| Description | Desktop | Mobile |
@@ -242,7 +227,7 @@ In this artifact we approach two elements:
 | 7 | Website vertical menu | ![](Pictures/vertical_menu.PNG) | ![](Pictures/vertical_menu_mob.PNG) |
 | 8 | Footer |  n/a |  n/a |
 
-*Table 9: Homepage not logged in features*
+*Table 11: Homepage not logged in features*
 
 ---
 ### **UI02 Homepage Logged In**
@@ -251,7 +236,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/homepage_logged.PNG) |  ![](Pictures/homepage_logged_mob.PNG) |
 
-*Table 10: Homepage logged in Wireframe*
+*Table 12: Homepage logged in Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
@@ -266,7 +251,7 @@ In this artifact we approach two elements:
 | 8 | Footer |  n/a |  n/a |
 | 9 | Notification system | ![](Pictures/notification.PNG) | ![](Pictures/notification_mob.PNG) |
 
-*Table 11: Homepage logged in features*
+*Table 13: Homepage logged in features*
 
 ---
 ### **UI03 Login Page**
@@ -275,7 +260,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/login.PNG) |  ![](Pictures/login_mob.PNG) |
 
-*Table 12: Log in Wireframe*
+*Table 14: Log in Wireframe*
 
 ---
 ### **UI04 Sign up**
@@ -284,7 +269,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/signup.PNG) |  ![](Pictures/signup_mob.PNG) |
 
-*Table 13: Sign up Wireframe*
+*Table 15: Sign up Wireframe*
 
 ---
 ### **UI05 Author Page**
@@ -293,7 +278,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/author_page.PNG) |  ![](Pictures/author_page_mob.PNG) |
 
-*Table 14: Author Page Wireframe*
+*Table 16: Author Page Wireframe*
 
 ---
 ### **UI06 Author Published Books**
@@ -302,7 +287,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/author_published.PNG) |  ![](Pictures/author_published_mob.PNG) |
 
-*Table 15: Author Published books Wireframe*
+*Table 17: Author Published books Wireframe*
 
 ---
 ### **UI07 Product Catalog**
@@ -311,13 +296,13 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/product_catalog.PNG) |  ![](Pictures/product_catalog_mob.PNG) |
 
-*Table 16: Procuct catalog Wireframe*
+*Table 18: Procuct catalog Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
 | 1 |When hovering options add to cart and to wishlist appear ( on desktop ). Double-tap to add the item to the wishlist ( on mobile ) | ![](Pictures/hover_product.PNG) | ![](Pictures/hover_product_mob.PNG)
 
-*Table 17: Procuct catalog features*
+*Table 19: Procuct catalog features*
 
 ---
 ### **UI08 Product Catalog with filter bar open**
@@ -326,7 +311,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/cat_filter.PNG) |  ![](Pictures/cat_filter_mob.PNG) |
 
-*Table 18: Procuct catalog with filter Wireframe*
+*Table 20: Procuct catalog with filter Wireframe*
 
 ---
 ### **UI10 Product Page**
@@ -335,7 +320,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/product.PNG) |  ![](Pictures/product_mob.PNG) |
 
-*Table 18: Procuct Wireframe*
+*Table 21: Procuct Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
@@ -347,16 +332,16 @@ In this artifact we approach two elements:
 | 6 | When hovering options add to cart and to wishlist appear (on desktop)Double-tap to add the item to the wishlist (on mobile) | ![](Pictures/hover_prod.PNG) | ![](Pictures/hover_prod_mob.PNG) |
 | 7 | Upon click, redirect the user to the author page | n/a | n/a |
 
-*Table 19: Procuct features*
+*Table 22: Product features*
 
 ---
 ### **UI11 Admin Dashboard Page (Management)**
 
 | Desktop | Mobile |
 |:-------:|:------:|
-| ![](Pictures/admin_page.PNG) |  ![](Pictures/admin_page_mob.PNG) |
+| ![](Pictures/admin_page.png) |  ![](Pictures/admin_page_mob.png) |
 
-*Table 20: Admin management page Wireframe*
+*Table 23: Admin management page Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:-------:|
@@ -379,7 +364,7 @@ In this artifact we approach two elements:
 | 11 | Delete FAQ Button - upon clicking the Delete FAQ pop-up will appear | ![](Pictures/del_faq.PNG) |  ![](Pictures/del_faq.PNG) |
 | 12 | Horizontal Scroll Bar in Mobile Management Tables - allows the admin to view the full extent of the table on their mobile phone. | n/a | n/a |
 
-*Table 21: Admin Page features*
+*Table 24: Admin Page features*
 
 ---
 ### **UI12 Product Edit Page**
@@ -388,7 +373,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/edit_prod.PNG) |  ![](Pictures/edit_prod_mob.PNG) |
 
-*Table 22: Admin Procuct edit Wireframe*
+*Table 25: Admin Procuct edit Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
@@ -396,7 +381,7 @@ In this artifact we approach two elements:
 | 2 | Book cover pictures edition area | ![](Pictures/cover_ed_menu.PNG) |  ![](Pictures/cover_ed_menu.PNG) |
 | 3 | Delete a user review, with an optional comment | ![](Pictures/del_review.PNG) |  ![](Pictures/del_review.PNG) |
 
-*Table 23: Admin Procuct edit features*
+*Table 26: Admin Procuct edit features*
 
 ---
 ### **UI13 Product Create Page**
@@ -405,7 +390,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/creat_book.PNG) |  ![](Pictures/creat_book_mob.PNG) |
 
-*Table 24: Admin Procuct create Wireframe*
+*Table 27: Admin Procuct create Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
@@ -413,7 +398,7 @@ In this artifact we approach two elements:
 | 2 | Open book cover picture edition area. | ![](Pictures/add_prod2.PNG) |  ![](Pictures/add_prod2.PNG) |
 | 3 | If the author doesn’t exist in the database, create one. | ![](Pictures/add_author.PNG) |  ![](Pictures/add_author_mob.PNG) |
 
-*Table 25: Admin Procuct create features*
+*Table 28: Admin Procuct create features*
 
 ---
 ### **UI14 Checkout Order Page (Shopping Cart)**
@@ -422,7 +407,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/checkout1.PNG) |  ![](Pictures/checkout1_mob.PNG) |
 
-*Table 26: Checkout page (Shopping Cart) Wireframe*
+*Table 29: Checkout page (Shopping Cart) Wireframe*
 
 ---
 ### **UI15 Checkout Order Page 2 (Delivery Address)**
@@ -432,13 +417,13 @@ In this artifact we approach two elements:
 | ![](Pictures/checkout2.PNG) |  ![](Pictures/checkout2_mob.PNG) |
 
 
-*Table 27: Checkout page (Delivery Address) features*
+*Table 30: Checkout page (Delivery Address) features*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
 | 1 | Insert new address information, when proceeding to checkout | ![](Pictures/add_address.PNG) |  ![](Pictures/add_address.PNG) | 
 
-*Table 28: Checkout page (Delivery Address) features*
+*Table 31: Checkout page (Delivery Address) features*
 
 ---
 ### **UI16 Checkout Order Page 3 (Payment)**
@@ -447,13 +432,13 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/checkout3.PNG) |  ![](Pictures/checkout3_mob.PNG) |
 
-*Table 29: Checkout page (Payment) Wireframe*
+*Table 32: Checkout page (Payment) Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
 | 1 | Insert new address information, when proceeding to checkout | ![](Pictures/visa.PNG) |  ![](Pictures/visa.PNG) | 
 
-*Table 30: Checkout page (Payment) features*
+*Table 33: Checkout page (Payment) features*
 
 ---
 ### **UI17 Checkout Order Page 4 (Confirmation)**
@@ -462,7 +447,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/checkout4.PNG) |  ![](Pictures/checkout4_mob.PNG) |
 
-*Table 31: Checkout page (Final) Wireframe*
+*Table 34: Checkout page (Final) Wireframe*
 
 ---
 ### **UI18 User Profile Page**
@@ -471,20 +456,20 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/u_profile1.PNG) |  ![](Pictures/u_profile1_mob.PNG) |
 
-*Table 32: User Profile Wireframe*
+*Table 35: User Profile Wireframe*
 
 
 | Desktop | Mobile |
 |:-------:|:------:|
 | ![](Pictures/u_profile2.PNG) |  ![](Pictures/u_profile2_mob.PNG) |
 
-*Table 33: User Profile Address Wireframe*
+*Table 36: User Profile Address Wireframe*
 
 | Desktop | Mobile |
 |:-------:|:------:|
 | ![](Pictures/u_profile3.PNG) |  ![](Pictures/u_profile3_mob.PNG) |
 
-*Table 34: User Profile Address Wireframe*
+*Table 37: User Profile Address Wireframe*
 
 ---
 ### **UI19 Wishlist**
@@ -493,7 +478,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/wishlist.PNG) |  ![](Pictures/wishlist_mob.PNG) |
 
-*Table 35: WishList Wireframe*
+*Table 38: WishList Wireframe*
 
 ---
 ### **UI20 Purchase History**
@@ -502,13 +487,13 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/phistory.PNG) |  ![](Pictures/phistory_mob.PNG) |
 
-*Table 36: Purchase History Wireframe*
+*Table 39: Purchase History Wireframe*
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
 | 1 | Return the order | ![](Pictures/returnp.PNG) | ![](Pictures/returnp.PNG) |
 
-*Table 37: Purchase History features*
+*Table 40: Purchase History features*
 
 ---
 ### **UI21 About us Page**
@@ -517,7 +502,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/about.PNG) |  ![](Pictures/about_mob.PNG) |
 
-*Table 38: About us Wireframe*
+*Table 41: About us Wireframe*
 
 ---
 ### **UI22 FAQ Page**
@@ -526,7 +511,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/faq.PNG) |  ![](Pictures/faq_mob.PNG) |
 
-*Table 39: FAQ Wireframe*
+*Table 42: FAQ Wireframe*
 
 ---
 ### **UI23 Contact us Page**
@@ -535,7 +520,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/contact.PNG) |  ![](Pictures/contact_mob.PNG) |
 
-*Table 40: Contact us Wireframe*
+*Table 43: Contact us Wireframe*
 
 
 ---
