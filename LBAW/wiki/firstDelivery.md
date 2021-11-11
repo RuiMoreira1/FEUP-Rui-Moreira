@@ -30,7 +30,7 @@ On our website we have two central types of actors, **administrators** and **use
     * **Guests** - that can view all of the products available but have to Log In to  checkout a purchase; 
     * **Authenticated users** - that can access more of the website, including their purchase history, wishlist, and notifications.
 
-# **A2: Actors and User Stories**
+# **A2 Actors and User Stories**
 
 This artifact contains the specification of the actors and their user stories, serving as agile documentation of project requirements.
 
