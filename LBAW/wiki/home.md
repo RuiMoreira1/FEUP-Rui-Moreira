@@ -7,7 +7,7 @@ Project documentation regarding the project developed for **LBAW**
 ### [ER: Requirements Specification Component](firstDelivery.md)
 
 * [A1 : The Last Chapter](firstDelivery.md#a1---online-shop---‘the-last-chapter’)
-* [A2 : Actors and User Stories](firstDelivery.md#a2:-actors-and-user-stories)
+* [A2 : Actors and User Stories](firstDelivery.md#a2-actors-and-user-stories)
 * [A3 : Information Architecture](firstDelivery.md#a3-information-architecture)
 
 
