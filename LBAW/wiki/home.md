@@ -12,3 +12,12 @@ Project documentation regarding the project developed for **LBAW**
 
 
 > Checklist Available [here](https://docs.google.com/spreadsheets/d/1XEtNUQIaNC17TGOuskqaxAFwLuNCY5szVM82XTTu-h4/edit#gid=537406521)
+
+> [Personal Group Checklist ](pCheck)
+---
+## **Work Group**
+
+>* Ana Matilde Guedes Perez da Silva Barra **up201904795**
+>* José Pedro Abreu Silva **up201904775**
+>* Renato Dangel Fortes Leite **up201908633**
+>* Rui Pedro Mendes Moreira **up201906355**

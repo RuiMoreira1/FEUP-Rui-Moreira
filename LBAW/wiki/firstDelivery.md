@@ -469,7 +469,7 @@ In this artifact we approach two elements:
 |:-------:|:------:|
 | ![](Pictures/u_profile3.PNG) |  ![](Pictures/u_profile3_mob.PNG) |
 
-*Table 37: User Profile Address Wireframe*
+*Table 37: User Profile Payment Method insertion Wireframe*
 
 ---
 ### **UI19 Wishlist**
