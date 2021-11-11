@@ -4,8 +4,6 @@ An Online Shop that becomes your ‘street corner’ bookshop only a click away!
  
 # **A1 - Online Shop - ‘The Last Chapter’**
 
-<div style="text-align: justify">
- 
 The main goal of the ‘The Last Chapter’ project is the development of a web-based online book store where you can buy all your favorite books, from old classics to comic books, and find others that you’ll love. The store is managed by a team of administrators that ensure the correct flow of the website.
  
 Our central motivation is to offer a pleasant shopping experience, where from the comfort of your own home, you can order books that may not be available in your usual ‘street corner’ bookshop.
@@ -30,7 +28,7 @@ On our website we have two central types of actors, **administrators** and **use
 * **Users** are divided into 2 main groups with different roles: 
     * **Guests** - that can view all of the products available but have to Log In to  checkout a purchase; 
     * **Authenticated users** - that can access more of the website, including their purchase history, wishlist, and notifications.
-</div>
+
 
 # **A2 Actors and User Stories**
 
