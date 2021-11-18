@@ -3,7 +3,7 @@ resources developed during **L.EIC** &amp;&amp; **M.EIC** course!
 
  ## **Curricular Units**
 
-
+>  * [**CGRA**](CGRA/)
 >  * [**MDIS**](MDIS/)
 >  * [**LTW**](LTW/)
 >  * [**LBAW**](LBAW/)
