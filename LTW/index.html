@@ -1,54 +1,67 @@
+
 <!DOCTYPE html>
+
 <html>
+
   <head>
-    <title>My HTML Document</title>
-    <link rel="stylesheet" href="mainWebPage.css">
+    <meta charset="utf-8">
+    <title>Mancala FEUP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="style.css">
+    <script src="func.js"></script>
   </head>
 
 <body>
-
-<h1 class="WebPageTitle"> Personal WebPage </h1>
-
-<p><em>Esta</em> é a minha nova página criada por macaquinhos  <strong> página
-pessoal</strong> assim que tiver conseguido dar setup ao live server, eu ao public_html <font color="red">terminado</font> o <a href="">exercício</a>.</p>
-
-
-<h2> <a href="https://github.com/RuiMoreira1" class="button1"> Personal GitHub profile </a></h2>
-
-<figure>
-  <img src="Pictures/feup-logo-300x133.gif" alt="Feup" class="center" >
-  <figcaption class="FeupSub"> Feup Logo </figcaption>
-</figure>
-<hr>
-
-<div></div>
-
-
-<h1>Test List</h1>
-<ol>
-  <li>
-    <h2> Test Point One </h2>
-      <ul>
-       <li>
-         <a href="projects.html" class="subItem"> Sub Item </a>
-       </li>
-       <li>
-         <a href="web.fe.up.pt/~up201903775" class="subItem" > Sub Item </a>
-       </li>
-      </ul>
-  </li>
-  <li>
-    <h2> Test Point Two </h2>
-      <ul>
-        <li class="Bold">
-          Item in strong text
-          <img src="Pictures/feup_paineis_fotovoltaicos_destaque.jpg" class="LtwFormat">
+  <header>
+    <img class="MancalaLogo" src="Pictures/mancala.png" alt="logo">
+    <nav>
+      <ul class="Navbar">
+        <li>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbutton">Dropdown</button>
+            <div id="dpd" class="dpdContent">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         </li>
-        <li> Sub item </li>
+        <li><a href="#">Rule 2 </a> </li>
+        <li><a href="#">Rule 3 </a> </li>
+        <li><a href="#">Rule 4 </a> </li>
       </ul>
-  </li>
-</ol>
+    </nav>
+    <a class="navButton" href="#"> <button> Login </button> </a>
+  </header>
+    <div class="container">
+      <div class="score-hole" id = "sHole-p2"></div>
+          <div class="players-rows">
+                <div class="row">
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                    <div class="hole"></div>
+                </div>
+
+                <div class="row">
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                <div class="hole"></div>
+                </div>
+         </div>
+         <div class="score-hole" id="sHole-p1"></div>
+    </div>
 
 
 </body>
+
+
+
+
+
 </html>
