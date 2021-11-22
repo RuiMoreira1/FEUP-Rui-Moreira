@@ -1,6 +1,8 @@
-# Trabalho realizado na Semana #3
+# Week #3
 
-## **Identificação**
+## Identification and Cataloging of a CVE
+
+### **Identification**
 - **CVE-2021-40449**
 
 - [Use-after-free vulnerability](https://encyclopedia.kaspersky.com/glossary/use-after-free/) (Incorrect use of dynamic memory during program operation)
@@ -24,7 +26,7 @@
 
 - The exploit had numerous debug strings from an older exploit [CVE-2016-3309](https://github.com/siberas/CVE-2016-3309_Reloaded/)
 
-## **Catalogação**
+### **Cataloging**
 
 - **Zero-day vulnerability**, exploitation detected.
 
@@ -33,7 +35,7 @@
 - According to [NVD](https://nvd.nist.gov/vuln/detail/CVE-2021-40449#match-7025675) 7.8.
 
 
-## **Exploit**
+### **Exploit**
 
 - **MysterySnail** is a remote shell-type Trojan which can collect and steal system information from compromised hosts and also provides a gateway to other attacks such as ransomware.
 
@@ -48,7 +50,7 @@
 - List of **commands** that this RAT can perform!
 
 
-![Rat Commands List](Rat_Commands.png)
+![Rat Commands List](img/Week3/Rat_Commands.png)
 
 - The vulnerability can lead to leakage of kernel module addresses in the computers memory, typically associated with a UAF vulnerability.
 
@@ -57,7 +59,7 @@
 - [Exploit available in github](https://github.com/ly4k/CallbackHell)
 
 
-## **Ataques**
+### **Atacks**
 
 - Kaspersky technologies **detected** a series of attacks, on multiple Microsoft Windows servers, with the help of the **Behavioral Detection Engine** and the **Exploit Prevention component**, before any damage was inflicted.
 
@@ -66,4 +68,3 @@
 - Attack has been **linked** with the infamous **IronHusky group** a Chinese-speaking APT.
 
 - Variants of this malware were being used in widespread espionage campaigns **targeting** IT companies, military, defense contractors and diplomatic entities.  
-
