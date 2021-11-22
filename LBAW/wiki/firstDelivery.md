@@ -1,33 +1,33 @@
 # **ER - Requirements Specification**
- 
+
 An Online Shop that becomes your ‘street corner’ bookshop only a click away!
- 
+
 # **A1 Online Shop ‘The Last Chapter’**
- 
- 
+
+
 The main goal of the ‘The Last Chapter’ project is the development of a web-based online book store where you can buy all your favorite books, from old classics to comic books, and find others that you’ll love. The store is managed by a team of administrators that ensure the correct flow of the website.
- 
+
 Our central motivation is to offer a pleasant shopping experience, where from the comfort of your own home, you can order books that may not be available in your usual ‘street corner’ bookshop.
- 
+
 “The Last Chapter” online shop will have an adaptive design, suitable for desktop or mobile, and provide an easy navigation system by grouping all the products by genre.
 
-The platform will have advanced search features, with filters to be applied (author, book genres, price ranges, item rating) and exact match and full-text search on a search bar. 
-	
-Authenticated Users can keep a wishlist and view the history of their previous purchases (if they have any). Regarding the payment method, there are two types available (Paypal, Credit Card). 
+The platform will have advanced search features, with filters to be applied (author, book genres, price ranges, item rating) and exact match and full-text search on a search bar.
+
+Authenticated Users can keep a wishlist and view the history of their previous purchases (if they have any). Regarding the payment method, there are two types available (Paypal, Credit Card).
 
 When the user proceeds to checkout and the purchase is complete, the product will be approved for shipping, allowing the admins to change the order status.
-	
+
 Each product will have a name, an image, one or more genres, a price, and an Author. In addition, each Book or eBook will also have a star rating, buyer reviews, general info about its editor and edition, and an applied discount at checkout defined by an administrator.
-	
+
 A review includes a star rating and a short description written by a buyer, allowing for the product star rating to be calculated by the average of all the reviews’ star ratings.
- 
+
 As an additional feature, we would like to have a “Recommend a book” button that provides a suggestion based on your previously bought books and favorite genres.  
- 
+
 On our website we have two central types of actors, **administrators** and **users**:
 
 * **Administrators'** accounts are independent of the user accounts, to the extent that they cannot buy products. Their job is to manage the registered users, the products, all the orders, and view data of complete purchases.
-* **Users** are divided into 2 main groups with different roles: 
-    * **Guests** - that can view all of the products available but have to Log In to  checkout a purchase; 
+* **Users** are divided into 2 main groups with different roles:
+    * **Guests** - that can view all of the products available but have to Log In to  checkout a purchase;
     * **Authenticated users** - that can access more of the website, including their purchase history, wishlist, and notifications.
 
 # **A2: Actors and User Stories**
@@ -144,7 +144,7 @@ This artifact contains the specification of the actors and their user stories, s
 | Identifier | Name  | Description |
 | -----------|-------------|-------|
 | BR01 | Account Deletion | In case an account is deleted (by its owner or by an administrator), all the shared user data is kept but made anonymous so that all the relevant information regarding reviews and purchases is maintained (i.e. for statistics). |
-| BR02 | Administrators | Administrator accounts cannot buy products, as they are the ones that manage them. | 
+| BR02 | Administrators | Administrator accounts cannot buy products, as they are the ones that manage them. |
 | BR03 | Write Review  | Only buyers that have bought a product can write a review for that specific product. |
 | BR04 | Unique Review | A buyer can only make a single review per product. |
 | BR05 | Edit and Delete Review | Only the author of a review can edit and/or delete that specific review. |
@@ -155,9 +155,9 @@ This artifact contains the specification of the actors and their user stories, s
 | BR10 | Stock Update | After every purchase, the stocks of the products affected must be updated (decreasing accordingly). |
 | BR11 | Shipping Date | The shipping date has to be the same as the order date or on a later date, not before. |
 | BR12 | Delivery date | The expected delivery date has to be at least one day later than the date of purchase (not on the same day neither before). |
-| BR13 | Cancel order | A buyer can only cancel its order if it hasn't already been shipped. (i.e. on the day of the purchase only, not after, not before). | 
+| BR13 | Cancel order | A buyer can only cancel its order if it hasn't already been shipped. (i.e. on the day of the purchase only, not after, not before). |
 | BR14 | Return Order | A buyer can return a placed order that has been already delivered. |
-| BR15 | Logout | The logout should only be possible if the user is currently logged in. | 
+| BR15 | Logout | The logout should only be possible if the user is currently logged in. |
 
 *Table 7: Business Rules*
 
@@ -171,12 +171,12 @@ This artifact contains the specification of the actors and their user stories, s
 | TR03 | Usability * | The system should be simple and easy to use, to allow the purchase of books by people of all ages and backgrounds. |
 | TR04 | Performance | The system should have response times shorter than 2s to ensure the user's attention. |
 | TR05 | Web application | The online shop should be implemented as a web application with dynamic pages with standard web technologies, such as HTML5, JavaScript, CSS3 and PHP. |
-| TR06 | Portability | The server-side system should work across multiple platforms (Windows, Linux, Mac OS, Android, etc.).| 
-| TR07 | Database | The PostgreSQL database management system must be used. | 
-| TR08 | Security * | The system must protect information from unauthorized access through the use of an authentication and verification system. | 
-| TR09 | Robustness | The system must be prepared to handle and continue operating when runtime errors occur. | 
+| TR06 | Portability | The server-side system should work across multiple platforms (Windows, Linux, Mac OS, Android, etc.).|
+| TR07 | Database | The PostgreSQL database management system must be used. |
+| TR08 | Security * | The system must protect information from unauthorized access through the use of an authentication and verification system. |
+| TR09 | Robustness | The system must be prepared to handle and continue operating when runtime errors occur. |
 | TR10 | Scalability | The system must be prepared to deal with the growth in the number of users and their actions. |
-| TR11 | Ethics | The website must respect the ethical principles in software development (for example, personal user details like passwords, payment credentials and addresses, should be stored encrypted and only shared with the permission of their owner). | 
+| TR11 | Ethics | The website must respect the ethical principles in software development (for example, personal user details like passwords, payment credentials and addresses, should be stored encrypted and only shared with the permission of their owner). |
 
 *Table 8: Technical Requirements*
 
@@ -192,10 +192,10 @@ This artifact contains the specification of the actors and their user stories, s
 
 # **A3 Information Architecture**
 
-The main goal to be achieved with this artifact is to preview the product user interface to be developed, so that it can be easily discussed with the clients, enabling quick, powerful interactions regarding the design of the user interface. 
- 
+The main goal to be achieved with this artifact is to preview the product user interface to be developed, so that it can be easily discussed with the clients, enabling quick, powerful interactions regarding the design of the user interface.
+
 In this artifact we approach two elements:
-* An overview of the information system from the perspective of a normal user ( sitemap ). 
+* An overview of the information system from the perspective of a normal user ( sitemap ).
 * An overview of the interface elements, common features to all pages, and interaction with the system.
 
 ## **A3.1 Sitemap**
@@ -347,7 +347,7 @@ In this artifact we approach two elements:
 |:--:|-------------|:-------:|:-------:|
 | 1 | “Page Links” Bar | n/a | n/a |
 | 2 | Order Search Filters | ![](Pictures/order_filter_ad.PNG) |  ![](Pictures/order_filter_ad.PNG) |
-| 3 | Order See More Button - upon clicking the order details pop-up will appear. ProductId with a link - upon clicking the admin will be redirected to the Product Page. | ![](Pictures/order_more_ad.PNG) |  ![](Pictures/order_more_ad_mob.PNG) | 
+| 3 | Order See More Button - upon clicking the order details pop-up will appear. ProductId with a link - upon clicking the admin will be redirected to the Product Page. | ![](Pictures/order_more_ad.PNG) |  ![](Pictures/order_more_ad_mob.PNG) |
 | 4 | User Search Filters | ![](Pictures/ad_banned.PNG) |  ![](Pictures/ad_banned.PNG) |
 | 5 | Create User Button - upon clicking the create user pop-up will appear | ![](Pictures/create_user_desk.PNG) |  ![](Pictures/create_user.PNG) |
 | 5 (1) | Edit User Button - upon clicking the edit user pop-up will appear | ![](Pictures/user_creation.PNG) |  ![](Pictures/user_creation_mob.PNG) |
@@ -421,7 +421,7 @@ In this artifact we approach two elements:
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
-| 1 | Insert new address information, when proceeding to checkout | ![](Pictures/add_address.PNG) |  ![](Pictures/add_address.PNG) | 
+| 1 | Insert new address information, when proceeding to checkout | ![](Pictures/add_address.PNG) |  ![](Pictures/add_address.PNG) |
 
 *Table 31: Checkout page (Delivery Address) features*
 
@@ -436,7 +436,7 @@ In this artifact we approach two elements:
 
 |ID| Description | Desktop | Mobile |
 |:--:|-------------|:-------:|:------:|
-| 1 | Insert new address information, when proceeding to checkout | ![](Pictures/visa.PNG) |  ![](Pictures/visa.PNG) | 
+| 1 | Insert card details to proceed with the order | ![](Pictures/visa.PNG) |  ![](Pictures/visa.PNG) |
 
 *Table 33: Checkout page (Payment) features*
 
@@ -546,28 +546,3 @@ In this artifact we approach two elements:
 ## **Editor** :
 
 * Ana Matilde Guedes Perez da Silva Barra up201904795
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
