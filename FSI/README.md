@@ -8,3 +8,4 @@
     - Marcelo Couto up201906086
 * [Class #3 Work Developed](LOGBOOK3.md)
 * [Class #4 Work Developed](LOGBOOK4.md)
+* [Class #5 Work Developed](LOGBOOK5.md)
