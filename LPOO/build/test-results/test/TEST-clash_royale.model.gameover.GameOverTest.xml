@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clash_royale.model.gameover.GameOverTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-31T00:48:48" hostname="LAPTOP-MNIAEDA4" time="0.004">
+  <properties/>
+  <testcase name="previousEntry()" classname="clash_royale.model.gameover.GameOverTest" time="0.001"/>
+  <testcase name="nextEntry()" classname="clash_royale.model.gameover.GameOverTest" time="0.001"/>
+  <testcase name="getNumberEntries()" classname="clash_royale.model.gameover.GameOverTest" time="0.001"/>
+  <testcase name="getEntry()" classname="clash_royale.model.gameover.GameOverTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

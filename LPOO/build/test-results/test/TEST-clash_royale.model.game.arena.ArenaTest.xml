@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clash_royale.model.game.arena.ArenaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2021-05-31T00:48:47" hostname="LAPTOP-MNIAEDA4" time="0.04">
+  <properties/>
+  <testcase name="getElementPlayer()" classname="clash_royale.model.game.arena.ArenaTest" time="0.002"/>
+  <testcase name="getTowerList()" classname="clash_royale.model.game.arena.ArenaTest" time="0.002"/>
+  <testcase name="getElementOpponent()" classname="clash_royale.model.game.arena.ArenaTest" time="0.002"/>
+  <testcase name="increaseElixir()" classname="clash_royale.model.game.arena.ArenaTest" time="0.001"/>
+  <testcase name="getPlayerOpponent()" classname="clash_royale.model.game.arena.ArenaTest" time="0.001"/>
+  <testcase name="getHeight()" classname="clash_royale.model.game.arena.ArenaTest" time="0.0"/>
+  <testcase name="getPlayer1()" classname="clash_royale.model.game.arena.ArenaTest" time="0.001"/>
+  <testcase name="getPlayer2()" classname="clash_royale.model.game.arena.ArenaTest" time="0.003"/>
+  <testcase name="getBridges()" classname="clash_royale.model.game.arena.ArenaTest" time="0.003"/>
+  <testcase name="getCharacterList()" classname="clash_royale.model.game.arena.ArenaTest" time="0.001"/>
+  <testcase name="getRiver()" classname="clash_royale.model.game.arena.ArenaTest" time="0.001"/>
+  <testcase name="getWidth()" classname="clash_royale.model.game.arena.ArenaTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

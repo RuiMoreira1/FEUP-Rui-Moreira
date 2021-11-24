@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clash_royale.model.PlayerTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2021-05-31T00:48:48" hostname="LAPTOP-MNIAEDA4" time="0.016">
+  <properties/>
+  <testcase name="removeCharacter()" classname="clash_royale.model.PlayerTest" time="0.002"/>
+  <testcase name="getCardsInGame()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="getSubTowers()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="increaseElixir()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="decreaseElixir()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="getTowers()" classname="clash_royale.model.PlayerTest" time="0.0"/>
+  <testcase name="getCharacters()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="addCharacter()" classname="clash_royale.model.PlayerTest" time="0.002"/>
+  <testcase name="getCards()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <testcase name="getElements()" classname="clash_royale.model.PlayerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

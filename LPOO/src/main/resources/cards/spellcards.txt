@@ -1,0 +1,5 @@
+Fireball 5 572 U+00A3
+Poison 4 427 U+00AA
+Nuke 5 672 U+00A8
+Rocket 6 1232 U+00AB
+Lightning 6 877 U+00A7

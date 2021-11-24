@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clash_royale.model.game.arena.ArenaLoaderTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-05-31T00:48:47" hostname="LAPTOP-MNIAEDA4" time="0.019">
+  <properties/>
+  <testcase name="getHeight()" classname="clash_royale.model.game.arena.ArenaLoaderTest" time="0.012"/>
+  <testcase name="getWidth()" classname="clash_royale.model.game.arena.ArenaLoaderTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

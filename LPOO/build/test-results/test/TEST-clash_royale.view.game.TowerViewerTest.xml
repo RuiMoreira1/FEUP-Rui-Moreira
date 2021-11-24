@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="clash_royale.view.game.TowerViewerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-31T00:48:49" hostname="LAPTOP-MNIAEDA4" time="0.001">
+  <properties/>
+  <testcase name="drawElement()" classname="clash_royale.view.game.TowerViewerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

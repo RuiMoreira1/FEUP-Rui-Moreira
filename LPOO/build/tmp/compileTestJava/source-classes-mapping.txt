@@ -1,0 +1,72 @@
+clash_royale/model/game/elemets/card/TroopCardTest.java
+ clash_royale.model.game.elemets.card.TroopCardTest
+clash_royale/model/game/elemets/RiverTest.java
+ clash_royale.model.game.elemets.RiverTest
+clash_royale/model/game/elemets/tower/TowerTest.java
+ clash_royale.model.game.elemets.tower.TowerTest
+ clash_royale.model.game.elemets.tower.TowerTest$1
+clash_royale/view/game/RiverViewerTest.java
+ clash_royale.view.game.RiverViewerTest
+clash_royale/model/game/elemets/character/SpellCharacterTest.java
+ clash_royale.model.game.elemets.character.SpellCharacterTest
+ clash_royale.model.game.elemets.character.SpellCharacterTest$1
+clash_royale/view/game/CharacterViewerTest.java
+ clash_royale.view.game.CharacterViewerTest
+clash_royale/view/game/GameViewerTest.java
+ clash_royale.view.game.GameViewerTest
+clash_royale/controller/gameover/GameOverControllerTest.java
+ clash_royale.controller.gameover.GameOverControllerTest
+clash_royale/states/game/GameStateTest.java
+ clash_royale.states.game.GameStateTest
+ clash_royale.states.game.GameStateTest$StateChild
+clash_royale/model/game/elemets/card/SpellCardTest.java
+ clash_royale.model.game.elemets.card.SpellCardTest
+clash_royale/controller/game/PlayerControllerTest.java
+ clash_royale.controller.game.PlayerControllerTest
+clash_royale/GameTest.java
+ clash_royale.GameTest
+clash_royale/gui/LanternaGUITest.java
+ clash_royale.gui.LanternaGUITest
+clash_royale/view/game/TowerViewerTest.java
+ clash_royale.view.game.TowerViewerTest
+clash_royale/model/game/elemets/BridgeTest.java
+ clash_royale.model.game.elemets.BridgeTest
+clash_royale/states/menu/MenuStateTest.java
+ clash_royale.states.menu.MenuStateTest
+ clash_royale.states.menu.MenuStateTest$StateChild
+clash_royale/view/menu/MenuViewerTest.java
+ clash_royale.view.menu.MenuViewerTest
+clash_royale/model/game/elemets/character/TroopCharacterTest.java
+ clash_royale.model.game.elemets.character.TroopCharacterTest
+ clash_royale.model.game.elemets.character.TroopCharacterTest$1
+clash_royale/controller/menu/MenuControllerTest.java
+ clash_royale.controller.menu.MenuControllerTest
+clash_royale/model/game/elemets/BoundaryTest.java
+ clash_royale.model.game.elemets.BoundaryTest
+clash_royale/model/game/arena/ArenaLoaderTest.java
+ clash_royale.model.game.arena.ArenaLoaderTest
+clash_royale/view/game/BoundaryViewerTest.java
+ clash_royale.view.game.BoundaryViewerTest
+clash_royale/model/PositionTest.java
+ clash_royale.model.PositionTest
+clash_royale/states/gameover/GameOverStateTest.java
+ clash_royale.states.gameover.GameOverStateTest
+ clash_royale.states.gameover.GameOverStateTest$StateChild
+clash_royale/controller/game/ArenaControllerTest.java
+ clash_royale.controller.game.ArenaControllerTest
+clash_royale/view/gameover/GameOverViewerTest.java
+ clash_royale.view.gameover.GameOverViewerTest
+clash_royale/model/gameover/GameOverTest.java
+ clash_royale.model.gameover.GameOverTest
+clash_royale/view/game/BridgeViewerTest.java
+ clash_royale.view.game.BridgeViewerTest
+clash_royale/controller/game/TowerControllerTest.java
+ clash_royale.controller.game.TowerControllerTest
+clash_royale/model/game/arena/ArenaTest.java
+ clash_royale.model.game.arena.ArenaTest
+clash_royale/model/menu/MenuTest.java
+ clash_royale.model.menu.MenuTest
+clash_royale/model/PlayerTest.java
+ clash_royale.model.PlayerTest
+clash_royale/model/game/elemets/card/CardTest.java
+ clash_royale.model.game.elemets.card.CardTest
