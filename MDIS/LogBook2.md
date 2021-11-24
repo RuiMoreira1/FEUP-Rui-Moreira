@@ -6,6 +6,8 @@ Exercícios propostos:
 
 ## **Exercicio 2 F.24**
 
+>Playing with Tarski's World
+
 ## **Exercicio 3 F.24**
 > ![](Screenshots/Ex3_tp2_F24.PNG)
 
@@ -38,5 +40,51 @@ Exercícios propostos:
 5. (Small(a)   ∧  Cube(a) )  ∨ (Medium(a)  ∧ Cube(a))  ∨ ( Small(a)  ∧ ¬Dodec(a) )  ∨ ( Medium(a) ∧ ¬Dodec(a))
 
 ## **Exercicio 1 F28**
-
+> Tautologia
 ![](Screenshots/Ex1_tp2_F28.PNG)
+> Não é tautologia
+![](Screenshots/ex2_tp3_mdis.PNG)
+> É tautologia
+![](Screenshots/ex2.4_tp3_mdis.PNG)
+
+
+## **Exercicio 2 F28**
+1.  **1** Logicamente verdadeira, **3** Satisfazivel, **4** Logicamente Verdadeira
+2. **1** Logicamente verdadeira, **3** Logicamente verdadeira,
+**4** Logicamente verdadeira
+3. **4** Logicamente verdadeira
+
+## **Exercicio 4 F28**
+
+1. Não é consequência tautologica ![](Screenshots/ex4.1_tp3_mdis.PNG)
+
+2. É consequência lógica ![](Screenshots/ex4.2_tp3_mdis.PNG)
+
+3. É consequência tautológica ![](Screenshots/ex4.3_tp3_mdis.PNG)
+
+4.  É consequência lógica ![](Screenshots/ex4.3_tp3_mdis.PNG)
+
+5. É consequência tautológica ![](Screenshots/ex4.5_tp3_mdis.PNG)
+
+6. É consequência lógica ![](Screenshots/ex4.5_tp3_mdis.PNG)
+
+7. 
+
+## **Exercício 5 F28**
+
+1. ![](Screenshots/ex5.1_tp3_mdis.PNG)
+
+2. ![](Screenshots/ex5.2_tp3_mdis.PNG)
+
+3. ![](Screenshots/ex5.3_tp3_mdis.PNG)
+
+4. ![](Screenshots/ex5.4_tp3_mdis.PNG)
+
+5. ![](Screenshots/ex5.4_tp3_mdis.PNG)
+
+6. ![](Screenshots/ex5.6_tp3_mdis.PNG)
+
+## **Exercicio 10 F28**
+
+1. ![](Screenshots/ex10_1_tp3_mdis.PNG)
+2. ![](Screenshots/ex10_2_tp3_mdis.PNG)
