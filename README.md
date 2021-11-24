@@ -3,6 +3,7 @@ resources developed during **L.EIC** &amp;&amp; **M.EIC** course!
 
  ## **Curricular Units**
 
+>  * [**LPOO**](LPOO/)
 >  * [**SOPE**](SOPE/)
 >  * [**CGRA**](CGRA/)
 >  * [**MDIS**](MDIS/)
