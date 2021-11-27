@@ -11,7 +11,7 @@ Project documentation regarding the project developed for **LBAW**
 * [**A3** : Information Architecture](firstDelivery#a3-information-architecture)
 
 ### [**Second Delivery EBD: Database Specification Component**](secondDelivery)
- * [**A4** : A4 Conceptual Data Model](secondDelivery#a4-conceptual-data-model)
+ * [**A4** : Conceptual Data Model](secondDelivery#a4-conceptual-data-model)
  * [**A5** : Relational Schema, validation and schema refinement](secondDelivery#a5-relational-schema,-validation-and-schema-refinement)
  * [**A6** : Indexes, triggers, transactions and database population](secondDelivery#a6-indexes,-triggers,-transactions-and-database-population)
 
