@@ -1,5 +1,3 @@
-import Distribution.PackageDescription (mkFlagAssignment)
-import Distribution.Simple.Utils (xargs)
 {- Exercise 1.1 Pratical sheet 1 -}
 
 testaTriangulo :: Float -> Float -> Float -> Bool 
@@ -167,3 +165,84 @@ curta' [_] = True
 curta' [_,_] = True
 curta' [] = True
 curta' _ = False
+
+{- Exercise 1.15 a) Pratical sheet 1 -}
+
+mediana :: (Ord a, Num a) => a -> a -> a -> a 
+mediana a b c
+    | a1 <= max c1 b1 &&  a1 >= min b1 c1 = a 
+    | b1 <= max c1 a1 &&  b1 >= min a1 c1 = b 
+    | c1 <= max c1 b1 &&  c1 >= min b1 a1 = c 
+    where a1 = abs a 
+          b1 = abs b
+          c1 = abs c
+
+
+{- Exercise 1.15 a) b) Pratical sheet 1 -}
+mediana' :: (Ord a, Num a) => a -> a -> a -> a 
+mediana' a b c = res
+    where res = a + b + c - max3' a b c - min3' a b c
+
+
+{- Exercise 1.16 Pratical sheet 1 -}
+converte100 :: (Integral a) => a -> String
+converte100 1 = "um"
+converte100 2 = "dois"
+converte100 3 = "tres"
+converte100 4 = "quatro"
+converte100 5 = "cinco"
+converte100 6 = "seis"
+converte100 7 = "sete"
+converte100 8 = "oito"
+converte100 9 = "nove"
+converte100 10 = "dez"
+converte100 11 = "onze"
+converte100 12 = "doze"
+converte100 13 = "treze"
+converte100 14 = "catorze"
+converte100 15 = "quinze"
+converte100 16 = "dezasseis"
+converte100 17 = "dezassete"
+converte100 18 = "dezoito"
+converte100 19 = "dezanove"
+converte100 20 = "vinte"
+converte100 30 = "trinta"
+converte100 40 = "quarenta"
+converte100 50 = "cinquenta"
+converte100 60 = "sessenta"
+converte100 70 = "setenta"
+converte100 80 = "oitenta"
+converte100 90 = "noventa"
+converte100 n
+    | n <= 0 = error "Numero negativo ou nulo"
+    | n >= 100 = error "Numero maior ou igual a 100"
+    | otherwise = (converte100 (n - (mod n 10))) ++ " e " ++ (converte100 (mod n 10))
+
+converte1000 :: (Integral a) => a -> String
+converte1000 100 = "cem"
+converte1000 200 = "duzentos"
+converte1000 300 = "tresentos"
+converte1000 400 = "quatrocentos"
+converte1000 500 = "quinhentos"
+converte1000 600 = "seicentos"
+converte1000 700 = "setecentos"
+converte1000 800 = "oitocentos"
+converte1000 900 = "novecentos"
+converte1000 n
+    | n <= 0 = error "Numero negativo ou nulo"
+    | n >= 1000 = error "Numero maior ou igual a 1000"
+    | n < 100 = converte100 n
+    | n < 200 = "cento e " ++ (converte100 (mod n 100))
+    | otherwise = (converte1000 (n - (mod n 100))) ++ " e " ++ (converte100 (mod n 100))
+
+converte :: (Integral a) => a -> String
+converte n
+    | n <= 0 = error "Numero negativo ou nulo"
+    | n >= 1000000 = error "Numero maior ou igual a 1000000"
+    | n < 1000 = converte1000 n
+    | n < 2000 = "mil" ++ converteAux n1000
+    | otherwise = (converte1000 (div n 1000)) ++ " mil" ++ converteAux n1000
+    where n1000 = mod n 1000
+          converteAux n1000 = if n1000 == 0
+                                then ""
+                                else (if (n1000 <= 100 || mod n1000 100 == 0) then " e " else " ") ++ converte1000 n1000
