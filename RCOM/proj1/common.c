@@ -1,6 +1,5 @@
 #include "common.h"
 
-
 int isRejected;
 
 int checkSupervisionFrame(MACHINE_STATE *state, int fd, char A_BYTE, char C_BYTE, char* reject){
@@ -10,21 +9,19 @@ int checkSupervisionFrame(MACHINE_STATE *state, int fd, char A_BYTE, char C_BYTE
 
   switch(*state){
     case START_:
-      if (DEBUG == 1) fprintf(stdout,"Entered in START_\n");
+      if (DEBUG == 1) fprintf(stdout,"Entered in START_ | ");
       if( frame_byte == FLAG ) *state = FLAG_RCV;
-      else *state = START_;
       break;
     case FLAG_RCV:
       isRejected = 0;
-      if (DEBUG == 1) fprintf(stdout,"Entered in FLAG_RCV\n");
-      if( frame_byte == FLAG) return SUCCESS;
+      if (DEBUG == 1) fprintf(stdout,"Entered in FLAG_RCV | ");
+      if( frame_byte == FLAG ) return SUCCESS;
       else if( frame_byte == A_BYTE ) *state = A_RCV;
       else *state = START_;
       break;
     case A_RCV:
-      if (DEBUG == 1) fprintf(stdout,"Entered in A_RCV\n");
+      if (DEBUG == 1) fprintf(stdout,"Entered in A_RCV | ");
       if( reject != NULL && frame_byte == *reject ) {
-        fprintf(stderr,"Rej Byte\n");
         isRejected = 1;
       }
       if( frame_byte == FLAG ) *state = FLAG_RCV;
@@ -32,7 +29,7 @@ int checkSupervisionFrame(MACHINE_STATE *state, int fd, char A_BYTE, char C_BYTE
       else *state = START_;
       break;
     case C_RCV:
-      if (DEBUG == 1) fprintf(stdout,"Entered in C_RCV\n");
+      if (DEBUG == 1) fprintf(stdout,"Entered in C_RCV | ");
       if( frame_byte == FLAG ) *state = FLAG_RCV;
       else if( frame_byte == BCC(A_BYTE,C_BYTE)  ) *state = BCC_OK;
       else *state = START_;
@@ -60,7 +57,7 @@ int getBytefromFd(int fd, char *byte_to_be_read){
     fprintf(stderr,"Error reading byte from fd\n");
     return ERROR;
   }
-  if(DEBUG) fprintf(stdout,"Byte read: %02x\n", *byte_to_be_read);
+  if(DEBUG) fprintf(stdout,"Byte read: %02x , ", *byte_to_be_read);
   return SUCCESS;
 }
 
@@ -77,7 +74,7 @@ int sendSupervisionFrame(int fd, char A_BYTE, char C_BYTE){
   return SUCCESS;
 }
 
-char createBCC2(char *buffer, int bufferSize){
+int createBCC2(char *buffer, int bufferSize, char *bcc2){
   if(sizeof(buffer) > 0){
     char BCC2 = buffer[0];
 
@@ -85,10 +82,17 @@ char createBCC2(char *buffer, int bufferSize){
       BCC2 ^= buffer[i];
     }
 
-    return BCC2;
+    *bcc2 = BCC2;
+    return SUCCESS;
   }
   else{
-    fprintf(stderr,"Unable to create BCC2, buffer not allocated correclty\n");
-    return '\0';
+    fprintf(stderr,"Unable to create BCC2, buffer not allocated correctly\n");
+    return ERROR;
   }
+}
+
+void insertError(char *data, int size, int probability){
+  int r = rand() % 100;
+
+  if( r < probability ) data[size] += 2;  
 }

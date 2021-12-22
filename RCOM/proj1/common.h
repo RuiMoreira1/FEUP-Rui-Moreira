@@ -1,17 +1,19 @@
-#ifndef COMMON_H
-#define COMMON_H
+#ifndef STATEMACHINE_H
+#define STATEMACHINE_H
 
 #include "macros.h"
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 /*! State machine enumeration class */
 typedef enum {
-   START_,    /* Start state */
-   FLAG_RCV,  /* 0x7E is validated */
-   A_RCV,     /* A Field byte is validated*/
-   C_RCV,     /* C Field byte is validated */
-   BCC_OK,    /* BCC(A_FIELD, C_FIELD) byte is validated */
-   STOP_      /* Flags validated correctly */
+   START_,        /* Start state */
+   FLAG_RCV,      /* 0x7E is validated */
+   A_RCV,         /* A Field byte is validated*/
+   C_RCV,         /* C Field byte is validated */
+   BCC_OK,        /* BCC(A_FIELD, C_FIELD) byte is validated */
+   STOP_          /* Flags validated correctly */
  } MACHINE_STATE;
 
 
@@ -47,13 +49,22 @@ int getBytefromFd(int fd, char *byte_to_be_read);
 int sendSupervisionFrame(int fd, char A_BYTE, char C_BYTE);
 
 /**
- * @bried Create Information Trame BCC2, consisisting in a xor of all the data field
+ * @brief Create Information Trame BCC2, consisisting in a xor of all the data field
  * bits, therefore creating BCC2
  *
  * @param  buffer                   Information camp
  * @param  bufferSize               Information camp size
  * @return            BCC2 upon success, '\0' otherwise
  */
-char createBCC2(char *buffer, int bufferSize);
+int createBCC2(char *buffer, int bufferSize, char *bcc2);
+
+/**
+ * @brief Create errors at runtime, to ensure the implementation strength
+ * 
+ * @param data                      Buffer
+ * @param size                      Index of data buffer that will be changed
+ * @param probability               Probability of introducing error
+ */
+void insertError(char *data, int size, int probability);
 
 #endif

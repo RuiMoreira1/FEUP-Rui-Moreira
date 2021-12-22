@@ -1,6 +1,5 @@
 #include "dataLayer.h"
 
-
 int llopen(char *filename, int id){
 
   int fd;
@@ -31,6 +30,7 @@ int llclose(int fd, int id){
     return ERROR;
   }
 
+  fprintf(stdout,"Closing %s\n", id == 1 ? "Receiver" : "Sender");
   return SUCCESS;
 }
 
@@ -40,14 +40,13 @@ int llwrite(int fd, char *buffer, int size, int id){
     fprintf(stderr,"The receiver is unable send data\n");
     return ERROR;
   }
-
   return sendStuffedFrame(fd, buffer, size);
 }
 
 
 int llread(int fd, char *buffer, int id){
   if( id == SENDERID ){
-    fprintf(stderr, "The sender is unable to read data");
+    fprintf(stderr, "The sender is unable to read data\n");
     return ERROR;
   }
 

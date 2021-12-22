@@ -2,25 +2,19 @@ CC=gcc
 CFLAGS = #-Wall
 LIBS =
 
-EMISSOR = dataLayer.c sender.c common.c
-RECEPTOR = dataLayer.c receiver.c common.c
+SP = serial.c application.c sender.c receiver.c common.c dataLayer.c
 
-EMISSOR_OBJ = $(EMISSOR:.c=.o)
-RECEPTOR_OBJ = $(RECEPTOR:.c=.o)
+SP_OBJ = $(SP:.c=.o)
 
-EMISSOR_EXEC = sender
-RECEPTOR_EXEC = receiver
+SP_EXEC = serialport
 
-all: $(EMISSOR_EXEC) $(RECEPTOR_EXEC)
+all: $(SP_EXEC)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(EMISSOR_EXEC): $(EMISSOR_OBJ)
-	$(CC) $(CFLAGS) -o $@ $(EMISSOR_OBJ) $(LIBS)
-
-$(RECEPTOR_EXEC): $(RECEPTOR_OBJ)
-	$(CC) $(CFLAGS) -o $@ $(RECEPTOR_OBJ) $(LIBS)
+$(SP_EXEC): $(SP_OBJ)
+	$(CC) $(CFLAGS) -o $@ $(SP_OBJ) $(LIBS)
 
 clean:
-	rm -rf $(EMISSOR_EXEC) $(RECEPTOR_EXEC) *.o *.d
+	rm -rf $(SP_EXEC) *.o *.d serialport *.txt Stderr_sender Stderr_receiver Stdout_sender Stdout_receiver

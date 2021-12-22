@@ -1,26 +1,5 @@
-/**
- * Non-Canonical Input Processing
- * From https://tldp.org/HOWTO/Serial-Programming-HOWTO/x115.html by Gary Frerking and Peter Baumann
-**/
-
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <termios.h>
-#include <stdio.h>
 #include "sender.h"
 
-
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-#define BAUDRATE B38400
-#define _POSIX_SOURCE 1 /* POSIX compliant source */
-#define FALSE 0
-#define TRUE 1
-
-volatile int STOP_RUNNING = FALSE;
 
 MACHINE_STATE senderState;
 
@@ -30,8 +9,8 @@ struct termios oldtio;
 
 
 void answerAlarm(){
-	fprintf(stdout, "Timeout\n");
 	flag = 1; conta++;
+	fprintf(stderr, "Timeout\n");
 }
 
 
@@ -97,8 +76,8 @@ int sendSetFrame(int fd){
 	char setFrame[5] = {FLAG, A_SR, C_SET, BCC(A_SR,C_SET),FLAG};
 
 	while(setState != STOP_){
-		if( conta == 3 ){
-				fprintf(stderr,"Communication between Receiver && Sender failed\n");
+		if( conta == MAX_NO_ANSWER ){
+				fprintf(stderr,"Communication between Receiver && Sender failed SET\n");
 				return ERROR;
 		}
 
@@ -131,14 +110,14 @@ int senderDisc(int fd){
 	MACHINE_STATE senderState = START_;
 
 	while( senderState != STOP_ ){
-		if( conta == 3 ){
-			fprintf(stdout,"Communication between Receiver && Sender failed\n");
+		if( conta == MAX_NO_ANSWER ){
+			fprintf(stdout,"Communication between Receiver && Sender failed DISC\n");
 			return ERROR;
 		}
 
 		if( flag ){
 			flag = 0;
-			if( write(fd, frame, 5) == -1 ){
+			if( write(fd, frame, 5) == ERROR ){
 				fprintf(stderr,"Error writing to Serial Port DISC frame\n");
 				return ERROR;
 			}
@@ -165,7 +144,7 @@ int closeSender(int fd){
 
 	if (tcsetattr(fd, TCSANOW, &oldtio) == -1)
   {
-    fprintf(stderr,"tcsetattr");
+    fprintf(stderr,"tcsetattr\n");
     return ERROR;
   }
   close(fd);
@@ -214,10 +193,10 @@ int sendStuffedFrame(int fd, char* buffer, int bufferSize){
 	}
 
 	char I_C_BYTE = C_FRAME_I(s);
-	char BCC2 = createBCC2(buffer, bufferSize);
+	char BCC2;
 
-	if( BCC2 == '\0' ) {
-		if(DEBUG) fprintf(stdout,"Error generating BCC2, data field problem\n");
+	if( createBCC2(buffer, bufferSize, &BCC2) == ERROR ) {
+		fprintf(stderr,"Error generating BCC2, data field problem\n");
 		return ERROR;
 	}
 
@@ -226,12 +205,15 @@ int sendStuffedFrame(int fd, char* buffer, int bufferSize){
 	char stuffedBuffer[STUFF_DATA_MAX];
 
 	int stuffedBufferSize = dataStuffing(buffer, bufferSize, BCC2, stuffedBuffer);
+	//insertError(stuffedBuffer, 0, 2);
+	//insertError(frameH,3,2);
 
 	MACHINE_STATE stuffedBufferState = START_;
 
 	while( stuffedBufferState != STOP_ ){
-		if( conta == 3 ){
-			fprintf(stdout,"Communication between Receiver && Sender failed\n");
+		if( conta == MAX_NO_ANSWER ){
+			fprintf(stdout,"Communication between Receiver && Sender failed Stuffed frame\n");
+			stuffedBufferState = STOP_;
 			return ERROR;
 		}
 
@@ -239,17 +221,17 @@ int sendStuffedFrame(int fd, char* buffer, int bufferSize){
 			flag = 0;
 
 			if( write(fd , frameH, 4) == ERROR ){
-				fprintf(stderr,"Error writing to Serial Port Frame Header\n");
+				fprintf(stderr,"Error writing to Serial Port [Frame Header]\n");
 				return ERROR;
 			}
 
 			if( write(fd, stuffedBuffer, stuffedBufferSize) == ERROR ){
-				fprintf(stderr,"Error writing to Serial Port Stuffed Data\n");
+				fprintf(stderr,"Error writing to Serial Port [Stuffed Data]\n");
 				return ERROR;
 			}
 
 			if( write(fd, &frameT, 1) == ERROR ){
-				fprintf(stderr,"Error writing to Serial Port Frame Tail\n");
+				fprintf(stderr,"Error writing to Serial Port [Frame Tail]\n");
 				return ERROR;
 			}
 
@@ -265,7 +247,7 @@ int sendStuffedFrame(int fd, char* buffer, int bufferSize){
 			fprintf(stderr,"Error receiving correct info from receiver\n");
 			return ERROR;
 		}
-		else if ( supervisionRes > 0){
+		else if ( supervisionRes > 0 ){
 			flag = 1; conta++; /* Stuffed message wasn't acknowledged correctly resend frame */
 		}
 
@@ -276,45 +258,4 @@ int sendStuffedFrame(int fd, char* buffer, int bufferSize){
 	alarm(0); /* Deactivate alarm message was sent and Acknowledgement was verified and validated correctly */
 
 	return bufferSize;
-}
-
-
-int main(int argc, char **argv)
-{
-  if ((argc < 2) ||
-      ((strcmp("/dev/ttyS10", argv[1]) != 0) &&
-       (strcmp("/dev/ttyS11", argv[1]) != 0)))
-  {
-    fprintf(stdout,"Usage:\tnserial SerialPort\n\tex: nserial /dev/ttyS11\n");
-    exit(1);
-  }
-
-	fprintf(stdout,"Sender active\n");
-
-  int fd = openSender(argv[1]);
-
-	fprintf(stdout,"Sending stuffed frame\n");
-	char buffer[7] = {0x7e,0x01,0x02,0x03,0x04,0x05, 0x7d};
-	int sizeBuffer = sendStuffedFrame(fd, buffer, 7);
-	fprintf(stdout,"Out of stuffed frame\n");
-
-
-/*	fprintf(stdout,"Buffer stuffing test\n");
-
-	char buffer[6] = {0x7d,0x01,0x02,0x03,0x04,0x05};
-	char stuffedBuffer[STUFF_DATA_MAX];
-	char BCC2 = 0x7e;
-	int size = dataStuffing(buffer, 6, BCC2, stuffedBuffer);
-
-	for(int i = 0; i <size; i++) fprintf(stdout,"Byte -> %02x\n", stuffedBuffer[i]);*/
-
-
-
-	fprintf(stdout,"Closing\n");
-
-	closeSender(fd);
-
-
-
-
 }

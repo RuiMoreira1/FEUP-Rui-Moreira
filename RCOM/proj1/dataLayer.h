@@ -1,11 +1,9 @@
 #ifndef DATALAYER_H
 #define DATALAYER_H
 
-
 #include "sender.h"
 #include "receiver.h"
 
-//int id; /* Receiver -> 1 | Sender -> 0 */
 
 /**
  * @brief Open serial port connection through a file descriptor, in a specific
