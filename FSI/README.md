@@ -9,3 +9,4 @@
 * [Class #3 Work Developed](LOGBOOK3.md)
 * [Class #4 Work Developed](LOGBOOK4.md)
 * [Class #5 Work Developed](LOGBOOK5.md)
+* [Class #6 Work Developed](LOGBOOK6.md)

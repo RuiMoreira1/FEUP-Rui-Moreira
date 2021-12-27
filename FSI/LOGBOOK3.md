@@ -1,6 +1,6 @@
-# Week #3
+# **Week #3**
 
-## Identification and Cataloging of a CVE
+## **Identification and Cataloging of a CVE**
 
 ### **Identification**
 - **CVE-2021-40449**
