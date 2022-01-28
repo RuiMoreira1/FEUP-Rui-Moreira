@@ -1,0 +1,108 @@
+.prodCartImage{
+    height: 280px;
+    width: 180px;
+}
+
+.removeCart{
+    color: white;
+    margin: 0 0 0 0;
+    align-items: flex-start;    
+    background-color: #6d0b07;
+    width: 190px;
+    height: 55px;
+}
+
+.removeCart:hover{
+    background-color: #9ad3b9;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.deleteWish{
+    color: white;
+    margin: 0 0 0 0;
+    align-items: flex-start;    
+    background-color: #6d0b07;
+    width: 200px;
+    height: 35px;
+}
+
+.wishBut{
+    font-weight: bold;
+    width: 83px;
+    height: 35px;
+    background-color: #F4D1AE;
+    border: 0px;
+}
+
+.wishBut2{
+    font-weight: bold;
+    width: 140px;
+    height: 35px;
+    background-color: #F4D1AE;
+    border: 0px;
+}
+
+.wishBut2:hover{
+    color: black;
+    border: 1px solid #5b9279;
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.wishBut:hover{
+    color: black;
+    border: 1px solid #5b9279;
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.deleteWish:hover{
+    background-color: #9ad3b9;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.inputBtn{
+    color: white;
+    width: 57px;
+    height: 37px;
+}
+
+.btn-plus{
+    background-color: #69a88c;
+}
+
+.btn-minuse{
+    background-color: #6d0b07;
+}
+
+.btn-plus:hover{
+    background-color: #219661;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-minuse:hover{
+    color: white;
+    background-color: #8f0c08;
+    border-color: #8a1d01;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);;
+}
+
+.checkoutBut{
+    margin: 2em 0em 0em 0em;
+    background-color: #F4D1AE;
+    width: 330px;
+    height: 45px;
+    border: 0px;
+}
+
+.checkoutBut:hover{
+    color: black;
+    background-color: #F4EDEA;
+    border: solid 1px #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

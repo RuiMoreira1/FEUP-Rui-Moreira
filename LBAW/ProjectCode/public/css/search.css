@@ -1,0 +1,79 @@
+.carouselExampleIndicators button{
+    margin: 0 0 0 0;
+}
+
+.next{
+    margin: 0 0 0 0;
+}
+
+.imageControl{
+    height: 550px;
+    width: 100%;
+}
+  
+
+.card{
+    --bs-bg-opacity: 0;
+    border: 0px;
+    border-radius: 25px;
+    padding-right: 1px;
+    margin: 0 0 0 0;    
+}
+
+.goProd a{
+    padding: 0em 5em 0em 5em;
+}
+
+.goProd{
+    margin-left: 64%;
+    padding: 0.4em 0em 0em 0em;
+    font-size: 0.75em;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F4D1AE;
+    width: 120px;
+    height: 30px;
+}
+
+.goProd:hover{
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.filterRow{
+    padding: 3em 0em 1.5em 5em;
+}
+
+.filterButton{
+    text-align: center;
+    font-weight: bold;
+    background-color: #F4D1AE;
+    width: 240px;
+    height: 35px;
+}
+
+.filterButton:hover{
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.card-title{
+    margin: 0 0 0 0;
+}
+
+.ratingSearch{
+    font-size: 15px;
+    padding: 0em 0em 0.2em 0em;
+}
+
+.star{
+    padding: 0.2em 0.25em 0.2em 0em;   
+}
+
+.priceSearch{
+    font-size: 1.4em;
+    padding: 0em 0.3em 0.6em 0em;
+    margin: 0 0 0 0;
+}

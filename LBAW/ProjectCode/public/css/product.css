@@ -1,0 +1,325 @@
+.product{
+    margin: 5%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+
+.carouselProd{
+    height: 530px;
+    width: 340px;
+}
+
+.carouselController{
+    padding: 2em 0em 2em 2em;
+}
+
+.imageController{
+    height: 530px;
+    width: 340px;
+    margin: 0 0 10px 0;
+}
+
+.carousel-item .active{
+    margin-right: 0%;
+}
+
+.col-md .productImage{
+    padding-right: 2px;
+}
+
+.carousel-indicators{
+    bottom: -9%;
+}
+
+.carousel-indicators .active{
+    background-color: black;
+}
+
+.carousel-indicators #bt{
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.productName{
+    margin: 3% 3% 1% 0%;
+    padding: 1px 1px 1px 1px;
+    font-weight: bold;
+    
+}
+
+.tecInfo{
+    padding: 0.2em 0em 0em 0em;
+}
+
+.rating{
+    font-size: 20px;
+    padding: 0.4em 0em 0em 0em;
+
+}
+
+.quote{
+    padding: 2em 0.7em 0em 0em;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.sale{
+    display: flex;
+    flex-direction: row;
+    padding-top: 6.3em;
+}
+
+
+.price{
+    font-size: 1.7em;
+    margin: 0 0 0 0;
+    padding: 0em 1.4em 0.5em 0em; 
+}
+
+.addCart:hover {
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.addCart {
+    margin: 0 0 0 0;
+    align-items: flex-start;    
+    background-color: #F4D1AE;
+    width: 190px;
+    height: 55px;
+}
+
+.addWishlist:hover {
+    background-color: #9ad3b9;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.addWishlist {
+    margin: 0 0 0 0;
+    align-items: flex-start;    
+    background-color: #69a88c;
+    color: #FFFFFF;
+    width: 190px;
+    height: 55px;
+}
+
+.shipping{
+    font-size: 0.7em;
+    padding: 0.5em 0.5em 0.6em 0em;
+    margin-right: 1em;
+}
+
+
+.bi-star-fill{
+    color: rgb(255, 208, 0);
+}
+
+.bi-star-half{
+    color: rgb(255, 208, 0);
+}
+
+.bi-star{
+    color: rgb(82, 78, 78)
+}
+
+#module {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+#module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 4.3rem;
+    overflow: hidden;
+}
+
+#module #collapseExample.collapsing {
+    height: 3rem;
+}
+
+#module button.collapsed::before {
+    content: 'Show More';
+}
+
+#module button:not(.collapsed)::after {  
+    content: 'Show Less';
+}
+
+
+.synopsis{
+    /*padding: 0em 2em 0em 0em;*/
+    margin: 2% 5% 1% 5%;
+}
+
+.synopsisTitle{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.collapse{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.productDescription{
+    padding-left: 1em;
+    padding-right: 2em;
+}
+
+.showMore{
+    background-color: #F4D1AE;
+    font-weight: 700;
+    margin: 0 0 0 0;
+    padding: 0em 0em 0em 0em;
+    width: 110px;
+    height: 27px;
+}
+
+.showMore:hover{
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.card{
+    background-color: inherit;
+}
+
+.details{
+    margin: 0% 5% 0% 5%;
+}
+
+
+.authorMore{
+    padding: 1em 0em 1em 1em;
+}
+
+.bookSpecs h3{
+    margin: 0 0 0 0;
+}
+
+.bookSpecs p{
+    padding: 0em 0em 0em 1em;
+    font-size: 1.3em;
+}
+
+.authorImage{
+    padding:0;
+    width: 245px;
+    height: 300px;
+    margin-bottom: 0;
+}
+
+.authorMore .col-md-7{
+    margin: 0 0 0 0;
+}
+
+.authorDesc{
+    padding: 0em 1em 0em 0em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.moreAuthor{
+    margin: 0 0 0 0;
+}
+
+
+.reviewRating{
+    font-size: 1em;
+    padding: 0 0 0 0;
+}
+
+.reviewCard{
+    --bs-bg-opacity: 0;
+}
+
+.addReviewBtn:disabled{
+    background-color: grey;
+}
+
+.revBut{
+    font-size: 0.7em;
+    font-weight: bold;
+    background-color: red;
+    border: 0px;
+    width: 70px;
+    height: 23px;
+}
+
+.deleteForm{
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+.revBut:hover{
+    border: 1px solid #5b9279;
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#delBut{
+    color:white;
+    text-transform: none;
+    background-color: brown;
+    margin-bottom: 0;
+}
+
+#editBut{
+    background-color: cadetblue;
+}
+
+.review{
+    margin: 0% 5% 0% 5%;
+}
+
+.formCard{
+    padding-right: 1em;
+    margin-bottom: 0em;
+}
+
+.addReviewBtn{
+    color:black;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: 150px;
+    height: 35px;
+    background-color: #F4D1AE;
+    border: 0px;
+}
+
+.addReviewBtn:hover{
+    border: 1px solid #5b9279;
+    background-color: #F4EDEA;
+    border-color: #5b9279;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#naosei{
+    color: black;
+    border: 0px solid;
+    background-color: #F4D1AE;
+    width: 120px;
+    height: 35px;
+}
+
+#naosei:hover{
+    border: 1px solid #5b9279;
+    background-color: #F4EDEA;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#closeEdit{
+    border: 0px solid;
+    background-color: #F4D1AE;
+    width: 100px;
+    height: 35px;
+}
