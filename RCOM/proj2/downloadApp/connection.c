@@ -171,7 +171,7 @@ int userLogin(int sockfd, char *user, char *pass){
         return ERROR;
     }
 
-    if (res == 1){
+    if (res == SUCCESS){
         fprintf(stderr,"Sending password to the ftp server...\n");
 
         if (handleCommunication(sockfd, "pass", pass, NULL) < 0){
